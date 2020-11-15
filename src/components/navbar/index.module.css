@@ -1,0 +1,12 @@
+.linksContainer {
+  text-transform: uppercase;
+}
+.link {
+  list-style: none;
+}
+
+@media (--media-sm) {
+  .linksContainer {
+    display: flex;
+  }
+}
