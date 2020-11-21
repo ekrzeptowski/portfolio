@@ -1,0 +1,10 @@
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 30rem;
+  & input,
+  & textarea {
+    margin: 5px 0;
+    width: 100%;
+  }
+}
