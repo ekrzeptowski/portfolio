@@ -6,12 +6,19 @@ import styles from "./index.module.css";
 
 const ContactForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = data => console.log(data);
 
   console.log(watch("name"));
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
-      <Input name="name" ref={register} placeholder="Your name *" autoComplete="name" aria-label="Your name" required />
+      <Input
+        name="name"
+        ref={register}
+        placeholder="Your name *"
+        autoComplete="name"
+        aria-label="Your name"
+        required
+      />
       <Input
         name="email"
         type="email"

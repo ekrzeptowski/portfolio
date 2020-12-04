@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import styles from "./button.module.css"
+import styles from "./button.module.css";
 
 export function Button({ children }) {
-  return <button className={styles.button}>{children}</button>
+  return <button className={styles.button}>{children}</button>;
 }

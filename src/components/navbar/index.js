@@ -1,22 +1,22 @@
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from "gatsby";
+import React from "react";
 
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 const NavbarLinks = ({ menuLinks }) => (
-  <ul className={styles.linksContainer}>
+  <ul className={`container ${styles.linksContainer}`}>
     {menuLinks.map((link, i) => (
       <li className={styles.link} key={i}>
         <Link to={link.to}>{link.string}</Link>
       </li>
     ))}
   </ul>
-)
+);
 
 export function Navbar({ menuLinks }) {
   return (
-    <div>
+    <div className={styles.navbar}>
       <NavbarLinks menuLinks={menuLinks} />
     </div>
-  )
+  );
 }
