@@ -1,0 +1,42 @@
+.links {
+  flex-grow: 1;
+  text-align: center;
+}
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  color: inherit;
+  text-decoration: inherit;
+  margin: 10px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text > div {
+  margin-right: 20px;
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+@media (--media-sm) {
+  .contactContainer {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1050px) {
+  .social {
+    flex-direction: row;
+  }
+}

@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 30rem;
+  height: 100%;
   & input,
   & textarea {
     margin: 5px 0;
