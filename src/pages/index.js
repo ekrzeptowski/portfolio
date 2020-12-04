@@ -1,5 +1,5 @@
-import React from "react";
-// import { Link } from "gatsby";
+import React, { createRef } from "react";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -10,20 +10,53 @@ import Header from "../components/sections/Header";
 import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 
-const IndexPage = ({}) => {
+const IndexPage = ({
+  data: { strapiHome, strapiGlobal, allStrapiProject },
+}) => {
   const aboutRef = createRef();
   console.log(aboutRef);
 
   return (
     <Layout offset={aboutRef}>
-      <SEO />
+      <SEO
+        title={strapiHome.seo.title}
+        description={strapiHome.seo.description}
+      />
       <Header />
       <About ref={aboutRef} />
       <Skills />
-      <Projects />
-      <Contact />
+      <Projects projects={allStrapiProject.edges} />
+      <Contact contact={strapiGlobal} />
     </Layout>
   );
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allStrapiProject {
+      edges {
+        node {
+          title
+          technologies {
+            title
+          }
+          description
+        }
+      }
+    }
+    strapiHome {
+      bio
+      title
+      seo {
+        title
+        description
+      }
+    }
+    strapiGlobal {
+      contactEmail
+      contactPhone
+    }
+  }
+`;
