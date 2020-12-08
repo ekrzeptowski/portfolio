@@ -43,6 +43,16 @@ export const pageQuery = graphql`
             title
           }
           description
+          link
+          coverImage {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 640) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

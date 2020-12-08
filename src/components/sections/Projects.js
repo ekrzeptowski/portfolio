@@ -1,20 +1,20 @@
 import React from "react";
+import Project from "../project";
 import { SectionTitle, SubTitle } from "../typography";
+
+import styles from "./Projects.module.css";
 
 const Projects = ({ projects }) => {
   return (
     <section id="projects">
       <SectionTitle>Projects</SectionTitle>
       <SubTitle>TODO: Filter bar</SubTitle>
-      {projects.map((project) => {
-        project = project.node;
-        return (
-          <div>
-            <p>{project.title}</p>
-            <p>{project.description}</p>
-          </div>
-        )
-      })}
+      <div className={styles.projectsContainer}>
+        {projects.map((project) => {
+          project = project.node;
+          return <Project project={project} />;
+        })}
+      </div>
     </section>
   );
 };
