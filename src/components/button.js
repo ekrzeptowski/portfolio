@@ -7,5 +7,9 @@ export function Button({ children }) {
 }
 
 export function LinkButton(props) {
-  return <a {...props} className={styles.button}>{props.children}</a>;
+  return (
+    <a {...props} className={styles.button}>
+      {props.children}
+    </a>
+  );
 }

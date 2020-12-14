@@ -5,7 +5,7 @@ import { Input, TextArea } from "../input";
 import styles from "./index.module.css";
 
 const ContactForm = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, watch } = useForm();
   const onSubmit = data => console.log(data);
 
   console.log(watch("name"));

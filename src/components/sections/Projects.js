@@ -10,9 +10,9 @@ const Projects = ({ projects }) => {
       <SectionTitle>Projects</SectionTitle>
       <SubTitle>TODO: Filter bar</SubTitle>
       <div className={styles.projectsContainer}>
-        {projects.map((project) => {
+        {projects.map(project => {
           project = project.node;
-          return <Project project={project} />;
+          return <Project key={project.title} project={project} />;
         })}
       </div>
     </section>
