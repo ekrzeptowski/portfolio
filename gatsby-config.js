@@ -24,7 +24,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`project`, `technology`],
+        contentTypes: [`project`, `technology`, `technology-category`],
         //If using single types place them in this array.
         singleTypes: [`global`, `home`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
@@ -37,7 +37,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

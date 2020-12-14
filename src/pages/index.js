@@ -11,7 +11,7 @@ import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 
 const IndexPage = ({
-  data: { strapiHome, strapiGlobal, allStrapiProject },
+  data: { strapiHome, strapiGlobal, allStrapiProject, allStrapiTechnologyCategory },
 }) => {
   const aboutRef = createRef();
   console.log(aboutRef);
@@ -24,7 +24,7 @@ const IndexPage = ({
       />
       <Header />
       <About ref={aboutRef} />
-      <Skills />
+      <Skills skills={allStrapiTechnologyCategory.edges}/>
       <Projects projects={allStrapiProject.edges} />
       <Contact contact={strapiGlobal} />
     </Layout>
@@ -67,6 +67,23 @@ export const pageQuery = graphql`
     strapiGlobal {
       contactEmail
       contactPhone
+    }
+    allStrapiTechnologyCategory {
+      edges {
+        node {
+          type
+          type_pl
+          technologies {
+            title
+            description
+            logo {
+              localFile {
+                publicURL
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
