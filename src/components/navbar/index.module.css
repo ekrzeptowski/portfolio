@@ -1,12 +1,106 @@
+.navbar {
+  --shadow: 0px 1px 5px #1e1e1e;
+  --background: rgb(255 255 255 / 45%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
 .linksContainer {
   text-transform: uppercase;
+  padding: 0;
+  top: 0;
+  padding-top: 64px;
+  height: 100vh;
+  min-width: 250px;
+  position: absolute;
+  box-shadow: var(--shadow);
+  background: var(--background);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease-out;
+  transform: translateX(calc(-100% - 5px));
 }
 .link {
   list-style: none;
+  font-weight: 900;
+  display: flex;
+  position: relative;
+  & a {
+    padding: 24px;
+    width: 100%;
+    color: #000;
+    text-decoration: none;
+  }
+  &:not(:last-child):after {
+    display: block;
+    content: "";
+    border-bottom: 1px rgba(0, 0, 0, 0.32941) solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 48px);
+  }
+}
+
+.hamburgerContainer {
+  z-index: 3;
+  position: relative;
+  box-shadow: var(--shadow);
+  color: #fff;
+  background: #5e25ff;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 4px;
+}
+
+.expanded .linksContainer {
+  transform: translateX(0);
 }
 
 @media (--media-sm) {
+  .hamburgerContainer {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    height: auto;
+    right: 0;
+    backdrop-filter: blur(10px);
+    background: var(--background);
+    box-shadow: var(--shadow);
+  }
   .linksContainer {
+    position: unset;
+    padding: 0;
+    height: auto;
     display: flex;
+    justify-content: flex-end;
+    backdrop-filter: none;
+    transform: translateX(0);
+    background: none;
+    box-shadow: none;
+  }
+  .link:not(:last-child):after {
+    display: none;
+  }
+  .link > a {
+    position: relative;
+    &:hover {
+      color: var(--color-primary);
+    }
+    &:hover:after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 19px;
+      height: 2px;
+      background: var(--color-primary);
+      width: calc(100% - 48px);
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
   }
 }

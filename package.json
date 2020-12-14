@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-source-strapi": "^1.0.0-alpha.0",
     "gatsby-transformer-sharp": "^2.8.0",
+    "hamburger-react": "^2.4.0",
     "libphonenumber-js": "^1.9.6",
     "postcss": "^8.2.1",
     "postcss-preset-env": "^6.7.0",
@@ -29,6 +30,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.13.0",
     "typeface-lato": "^1.1.13",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
