@@ -44,6 +44,7 @@ export const pageQuery = graphql`
           }
           description
           link
+          github
           coverImage {
             localFile {
               childImageSharp {

@@ -31,10 +31,10 @@ const Project = ({ project }) => {
                 </LinkButton>
               )}
               {project.github && (
-                <a href={project.github}>
+                <LinkButton href={project.github}>
                   Source code
                   <FaGithub />
-                </a>
+                </LinkButton>
               )}
             </IconContext.Provider>
           </div>
