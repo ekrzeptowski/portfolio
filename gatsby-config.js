@@ -26,7 +26,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         contentTypes: [`project`, `technology`, `technology-category`],
         //If using single types place them in this array.
-        singleTypes: [`global`, `home`],
+        singleTypes: [`global`, `home`, `about`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

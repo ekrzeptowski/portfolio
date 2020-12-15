@@ -1,15 +1,14 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ bio }) => {
   return (
     <section className={styles.headerContainer}>
       <div className="container" style={{ width: "100%" }}>
         <div className={styles.greeting}>
-          <h3>Hello, I'm</h3>
-          <h1>Jan Krzeptowski</h1>
-          <h2>A front-end web developer</h2>
+          <ReactMarkdown>{bio}</ReactMarkdown>
         </div>
       </div>
       <svg className={styles.svg}>

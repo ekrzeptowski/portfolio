@@ -29,6 +29,7 @@
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.13.0",
+    "react-markdown": "^5.0.3",
     "typeface-lato": "^1.1.13",
     "use-media": "^1.4.0"
   },
