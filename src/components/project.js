@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./project.module.css";
+import styles from "./project.module.scss";
 import Img from "gatsby-image";
 
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";

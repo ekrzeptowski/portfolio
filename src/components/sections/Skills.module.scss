@@ -1,0 +1,26 @@
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+    align-items: center;
+  }
+  & img {
+    max-width: 64px;
+    flex-grow: 1;
+  }
+}
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+
+  & > div {
+    display: inline-block;
+  }
+}

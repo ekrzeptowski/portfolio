@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../project";
 import { SectionTitle, SubTitle } from "../typography";
 
-import styles from "./Projects.module.css";
+import styles from "./Projects.module.scss";
 
 const Projects = ({ projects }) => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Input, TextArea } from "../input";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const ContactForm = () => {
   const { register, handleSubmit, watch } = useForm();

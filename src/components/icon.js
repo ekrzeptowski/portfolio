@@ -1,7 +1,7 @@
 import React from "react";
 import { IconContext } from "@react-icons/all-files/lib";
 
-import styles from "./icon.module.css";
+import styles from "./icon.module.scss";
 
 export const Icon = ({ icon }) => {
   return (

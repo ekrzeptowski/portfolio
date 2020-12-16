@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";

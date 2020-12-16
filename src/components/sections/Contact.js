@@ -3,7 +3,7 @@ import ContactForm from "../contactForm";
 import { Icon } from "../icon";
 import { SectionTitle, SubTitle } from "../typography";
 
-import styles from "./Contact.module.css";
+import styles from "./Contact.module.scss";
 
 import { FaPhone } from "@react-icons/all-files/fa/FaPhone";
 import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";

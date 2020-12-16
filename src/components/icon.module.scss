@@ -1,0 +1,18 @@
+.iconStyle {
+  display: inline-flex;
+  background: var(--color-primary);
+  padding: 16px;
+  border-radius: 50%;
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--color-primary) 0 0 0px 2px inset;
+    border-radius: 50%;
+  }
+}

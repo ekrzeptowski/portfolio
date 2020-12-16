@@ -2,7 +2,7 @@ import React from "react";
 import Tippy from "@tippyjs/react";
 import { SectionTitle } from "../typography";
 
-import styles from "./Skills.module.css";
+import styles from "./Skills.module.scss";
 import "tippy.js/dist/tippy.css";
 
 const Skills = ({ skills }) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 const Header = ({ bio }) => {
   return (

@@ -9,7 +9,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import "./layout.css";
+import "normalize.css";
+import "./layout.scss";
 import { Navbar } from "./navbar";
 
 const Layout = ({ children }) => {

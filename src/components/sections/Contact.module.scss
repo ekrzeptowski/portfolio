@@ -1,3 +1,5 @@
+@import "../../common/variables";
+
 .links {
   flex-grow: 1;
   text-align: center;
@@ -11,6 +13,9 @@
   margin: 10px;
   &:hover {
     text-decoration: underline;
+    & > div::after {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -29,7 +34,7 @@
   flex-direction: column;
 }
 
-@media (--media-sm) {
+@media (min-width: $media-sm) {
   .contactContainer {
     flex-direction: row;
   }
