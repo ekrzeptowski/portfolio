@@ -1,21 +1,19 @@
+$shadow: 0 1px 5px 0 #1e1e1e4a;
+
 .input {
   all: unset;
   border: none;
-  box-shadow: 0 0 0 2px var(--color-primary) inset;
+  box-shadow: 0 0 0 2px currentColor inset, $shadow;
+  color: rgba(var(--color-text-rgb), 0.85);
   background: var(--color-background-secondary);
-  /* border: 2px solid var(--color-primary); */
-  /* background: var(--color-primary); */
-  /* color: var(--color-primary); */
-  /* cursor: pointer; */
   border-radius: 10px;
   padding: 15px 20px;
   font-weight: 500;
   font-size: 18px;
   position: relative;
-  /* transition: 0.2s all linear; */
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 4px var(--color-primary) inset;
+    box-shadow: 0 0 0 4px var(--color-primary) inset, $shadow;
   }
 }
 
@@ -24,9 +22,35 @@
 .input:-webkit-autofill:hover,
 .input:-webkit-autofill:focus {
   color: var(--color-primary);
+  background: var(--color-background-secondary);
+}
+
+.button {
+  @extend .input;
+  cursor: pointer;
+  width: auto;
+  font-weight: 900;
+  font-size: 16px;
+  margin: 0 10px 10px 0;
+  padding: 15px 15px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 0 0 2px currentColor inset, $shadow;
+  &:hover,&:focus {
+    box-shadow: $shadow, 0 0 0 4px var(--color-primary) inset;
+  }
+  &:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
 }
 
 .input[type="submit"] {
   width: auto;
   cursor: pointer;
+}
+
+.primary {
+  box-shadow: 0 0 0 2px var(--color-primary) inset, $shadow;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Input, TextArea } from "../input";
+import { Input, SubmitButton, TextArea } from "../input";
 
 import styles from "./index.module.scss";
 
@@ -34,7 +34,7 @@ const ContactForm = () => {
         aria-label="Your message"
         required
       />
-      <Input type="submit" />
+      <SubmitButton primary />
     </form>
   );
 };
