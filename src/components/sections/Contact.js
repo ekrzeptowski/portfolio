@@ -11,6 +11,20 @@ import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { parsePhoneNumber } from "libphonenumber-js";
 
+const RenderIcon = ({ icon }) => {
+  switch (icon) {
+    case "Linkedin":
+      icon = <FaLinkedin />;
+      break;
+    case "Github":
+      icon = <FaGithub />;
+      break;
+    default:
+      break;
+  }
+  return <Icon icon={icon} />;
+};
+
 const Contact = ({ contact }) => {
   const phoneNumber = parsePhoneNumber(contact.contactPhone);
   const parsedNumber = phoneNumber.formatInternational();
@@ -20,7 +34,6 @@ const Contact = ({ contact }) => {
       <div className={styles.contactContainer}>
         <div className={styles.links}>
           <div className={styles.social}>
-            {/* <div> */}
             <a
               className={`${styles.contactLink} ${styles.text}`}
               href={`tel:${contact.contactPhone}`}
@@ -35,19 +48,19 @@ const Contact = ({ contact }) => {
               <Icon icon={<FaEnvelope />} />
               {contact.contactEmail}
             </a>
-            {/* </div> */}
           </div>
           <div>
             <SubTitle>Social</SubTitle>
-            <a
-              className={styles.contactLink}
-              href="https://www.linkedin.com/in/jan-krzeptowski-7152a011b/"
-            >
-              <Icon icon={<FaLinkedin />} />
-            </a>
-            <a className={styles.contactLink} href="https://github.com/saj96n">
-              <Icon icon={<FaGithub />} />
-            </a>
+            {contact.socialNetworks.map(link => (
+              <a
+                key={link.url}
+                className={styles.contactLink}
+                href={link.url}
+                title={link.title}
+              >
+                <RenderIcon icon={link.title} />
+              </a>
+            ))}
           </div>
         </div>
         <ContactForm />

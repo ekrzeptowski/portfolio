@@ -79,6 +79,10 @@ export const pageQuery = graphql`
     strapiGlobal {
       contactEmail
       contactPhone
+      socialNetworks {
+        title
+        url
+      }
     }
     allStrapiTechnologyCategory {
       edges {
