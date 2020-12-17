@@ -34,18 +34,14 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata?.title || `Title`}
         menuLinks={data.site.siteMetadata?.menuLinks}
       />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+      <div>
+        <main className="container">{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
+            padding: `10px 5px`,
           }}
+          className="container"
         >
           © {new Date().getFullYear()}, Built with
           {` `}
