@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `Jan Krzeptowski`,
@@ -20,17 +22,28 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        contentTypes: [`project`, `technology`, `technology-category`],
-        //If using single types place them in this array.
-        singleTypes: [`global`, `home`, `about`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
-        loginData: {
-          identifier: "",
-          password: "",
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        path: `${__dirname}/locales`,
+        languages: [`en`, `pl`],
+        defaultLanguage: `en`,
+
+        // you can pass any i18next options
+        // pass following options to allow message content as a key
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
         },
       },
     },

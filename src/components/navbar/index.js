@@ -5,16 +5,19 @@ import styles from "./index.module.scss";
 
 import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const NavbarLinks = ({ menuLinks }) => (
+const NavbarLinks = ({ menuLinks }) => {
+  const {t} = useTranslation();
+  return (
   <ul className={`container ${styles.linksContainer}`}>
     {menuLinks.map((link, i) => (
       <li className={styles.link} key={i}>
-        <Link to={link.to}>{link.string}</Link>
+        <Link to={link.to}>{t(link.string)}</Link>
       </li>
     ))}
   </ul>
-);
+)};
 
 export function Navbar({ menuLinks }) {
   const mobile = !useMedia({ minWidth: "37.5rem" });

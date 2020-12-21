@@ -6,17 +6,18 @@ import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { LinkButton } from "./button";
 import { IconContext } from "@react-icons/all-files/lib";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 const Project = ({ project }) => {
   return (
     <div className={styles.projectContainer}>
-      <Img fluid={project.coverImage.localFile.childImageSharp.fluid} />
+      <Img fluid={project.preview.localFile.childImageSharp.fluid} />
       <div className={styles.projectContent}>
         <div className={styles.projectContentContainer}>
           <p className={styles.title}>{project.title}</p>
-          <p className={styles.description}>{project.description}</p>
+          <p className={styles.description}>{project.description?.description}</p>
           <ul className={styles.technologiesContainer}>
-            {project.technologies.map(technology => (
+            {project.technology.map((technology) => (
               <li key={technology.title} className={styles.technology}>
                 {technology.title}
               </li>
@@ -26,13 +27,13 @@ const Project = ({ project }) => {
             <IconContext.Provider value={{ style: { marginLeft: 5 } }}>
               {project.link && (
                 <LinkButton href={project.link}>
-                  Live demo
+                  <Trans>Live demo</Trans>
                   <FaExternalLinkAlt />
                 </LinkButton>
               )}
-              {project.github && (
-                <LinkButton href={project.github}>
-                  Source code
+              {project.repo && (
+                <LinkButton href={project.repo}>
+                  <Trans>Source code</Trans>
                   <FaGithub />
                 </LinkButton>
               )}

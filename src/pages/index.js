@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -15,24 +15,23 @@ const IndexPage = ({
     strapiAbout,
     strapiHome,
     strapiGlobal,
-    allStrapiProject,
-    allStrapiTechnologyCategory,
+    allContentfulProject,
+    allContentfulTechnologyCategory,
   },
 }) => {
   const aboutRef = createRef();
-  console.log(aboutRef);
 
   return (
     <Layout offset={aboutRef}>
       <SEO
-        title={strapiHome.seo.title}
-        description={strapiHome.seo.description}
+      // title={strapiHome.seo.title}
+      // description={strapiHome.seo.description}
       />
-      <Header bio={strapiHome.bio} />
-      <About ref={aboutRef} about={strapiAbout.content[0].content} />
-      <Skills skills={allStrapiTechnologyCategory.edges} />
-      <Projects projects={allStrapiProject.edges} />
-      <Contact contact={strapiGlobal} />
+      {/* <Header bio={strapiHome.bio} /> */}
+      {/* <About ref={aboutRef} about={strapiAbout.aboutText} /> */}
+      <Skills skills={allContentfulTechnologyCategory.edges} />
+      <Projects projects={allContentfulProject.edges} />
+      {/* <Contact contact={strapiGlobal} /> */}
     </Layout>
   );
 };
@@ -40,21 +39,23 @@ const IndexPage = ({
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiProject {
+  query IndexQuery($language: String) {
+    allContentfulProject(filter: { node_locale: { eq: $language } }) {
       edges {
         node {
           title
-          technologies {
+          technology {
             title
           }
+          description {
           description
+          }
           link
-          github
-          coverImage {
+          repo
+          preview {
             localFile {
               childImageSharp {
-                fluid(maxWidth: 640) {
+                fluid(maxWidth: 840) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -63,35 +64,19 @@ export const pageQuery = graphql`
         }
       }
     }
-    strapiAbout {
-      content {
-        content
-      }
-    }
-    strapiHome {
-      bio
-      title
-      seo {
-        title
-        description
-      }
-    }
-    strapiGlobal {
-      contactEmail
-      contactPhone
-      socialNetworks {
-        title
-        url
-      }
-    }
-    allStrapiTechnologyCategory {
+
+    allContentfulTechnologyCategory(
+      sort: { fields: order, order: ASC }
+      filter: { node_locale: { eq: $language } }
+    ) {
       edges {
         node {
           type
-          type_pl
-          technologies {
+          technology {
             title
+            description {
             description
+            }
             logo {
               localFile {
                 publicURL
