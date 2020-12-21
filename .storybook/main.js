@@ -3,7 +3,7 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "storybook-css-modules-preset",
+    "@storybook/preset-scss",
   ],
   webpackFinal: async config => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
