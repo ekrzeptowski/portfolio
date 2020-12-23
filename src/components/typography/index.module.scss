@@ -1,9 +1,12 @@
+@import "~rfs/scss";
+$rfs-factor: 2;
+
 .sectionTitle {
-    font-size: 64px;
+    @include font-size(64px);
     font-weight: 300;
 }
 
 .subTitle {
-    font-size: 36px;
+    @include font-size(36px);
     font-weight: 300;
 }
