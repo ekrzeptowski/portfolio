@@ -1,8 +1,14 @@
 {
-    "Home": "Strona główna",
-    "About": "O mnie",
-    "Projects": "Projekty",
-    "Contact": "Kontakt",
-    "Live demo": "Demo",
-    "Source code": "Kod"
+  "Home": "Strona główna",
+  "About": "O mnie",
+  "About me": "O mnie",
+  "Skills": "Umiejętności",
+  "Projects": "Projekty",
+  "Contact": "Kontakt",
+  "Social": "Media społecznościowe",
+  "Your name": "Twoje imię",
+  "Your e-mail": "Twój e-mail",
+  "Your message": "Wiadomość",
+  "Live demo": "Demo",
+  "Source code": "Kod"
 }

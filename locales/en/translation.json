@@ -1,8 +1,14 @@
 {
-    "Home": "Home",
-    "About": "About",
-    "Projects": "Projects",
-    "Contact": "Contact",
-    "Live demo": "Live demo",
-    "Source code": "Source code"
+  "Home": "Home",
+  "About": "About",
+  "About me": "About me",
+  "Skills": "Skills",
+  "Projects": "Projects",
+  "Contact": "Contact",
+  "Social": "Social",
+  "Your name": "Your name",
+  "Your e-mail": "Your e-mail",
+  "Your message": "Your message",
+  "Live demo": "Live demo",
+  "Source code": "Source code"
 }

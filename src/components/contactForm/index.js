@@ -1,10 +1,13 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Input, SubmitButton, TextArea } from "../input";
+import { useForm } from "react-hook-form";
 
 import styles from "./index.module.scss";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const { register, handleSubmit, watch } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -14,24 +17,24 @@ const ContactForm = () => {
       <Input
         name="name"
         ref={register}
-        placeholder="Your name *"
+        placeholder={`${t("Your name")} *`}
         autoComplete="name"
-        aria-label="Your name"
+        aria-label={t("Your name")}
         required
       />
       <Input
         name="email"
         type="email"
         ref={register}
-        placeholder="Your e-mail *"
-        aria-label="Your e-mail"
+        placeholder={`${t("Your e-mail")} *`}
+        aria-label={t("Your e-mail")}
         required
       />
       <TextArea
         name="message"
         ref={register}
-        placeholder="Your message *"
-        aria-label="Your message"
+        placeholder={`${t("Your message")} *`}
+        aria-label={t("Your message")}
         required
       />
       <SubmitButton primary />

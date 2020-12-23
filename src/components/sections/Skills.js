@@ -2,13 +2,17 @@ import React from "react";
 import Tippy from "@tippyjs/react";
 import { SectionTitle } from "../typography";
 
+import { Trans } from "gatsby-plugin-react-i18next";
+
 import styles from "./Skills.module.scss";
 import "tippy.js/dist/tippy.css";
 
 const Skills = ({ skills }) => {
   return (
     <section id="skills">
-      <SectionTitle>Skills</SectionTitle>
+      <SectionTitle>
+        <Trans>Skills</Trans>
+      </SectionTitle>
       <div className={styles.skillsContainer}>
         {skills.map(stack => (
           <div key={stack.node.type}>
