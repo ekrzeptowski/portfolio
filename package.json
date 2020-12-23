@@ -1,7 +1,7 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio",
   "private": true,
-  "description": "Portfolio",
+  "description": "My portfolio",
   "version": "0.1.0",
   "author": "Jan Krzeptowski <saj96n@gmail.com>",
   "dependencies": {
@@ -68,10 +68,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/saj96n/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/saj96n/portfolio/issues"
   },
   "browserslist": "last 2 versions"
 }
