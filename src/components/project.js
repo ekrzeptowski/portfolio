@@ -15,9 +15,11 @@ const Project = ({ project }) => {
       <div className={styles.projectContent}>
         <div className={styles.projectContentContainer}>
           <p className={styles.title}>{project.title}</p>
-          <p className={styles.description}>{project.description?.description}</p>
+          <p className={styles.description}>
+            {project.description?.description}
+          </p>
           <ul className={styles.technologiesContainer}>
-            {project.technology.map((technology) => (
+            {project.technology.map(technology => (
               <li key={technology.title} className={styles.technology}>
                 {technology.title}
               </li>

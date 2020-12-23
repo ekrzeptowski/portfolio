@@ -1,12 +1,12 @@
 import React, { forwardRef } from "react";
-import ReactMarkdown from "react-markdown";
+
 import { SectionTitle } from "../typography";
 
 const About = forwardRef((props, ref) => {
   return (
     <section id="about" ref={ref}>
       <SectionTitle>About me</SectionTitle>
-      <ReactMarkdown>{props.about}</ReactMarkdown>
+      <div dangerouslySetInnerHTML={{ __html: props.about }}></div>
     </section>
   );
 });

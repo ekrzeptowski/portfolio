@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 
 import styles from "./Header.module.scss";
 
@@ -7,9 +6,10 @@ const Header = ({ bio }) => {
   return (
     <section className={styles.headerContainer}>
       <div className="container" style={{ width: "100%" }}>
-        <div className={styles.greeting}>
-          <ReactMarkdown>{bio}</ReactMarkdown>
-        </div>
+        <div
+          className={styles.greeting}
+          dangerouslySetInnerHTML={{ __html: bio }}
+        ></div>
       </div>
       <svg className={styles.svg}>
         <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">

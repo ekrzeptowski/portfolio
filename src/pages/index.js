@@ -12,26 +12,58 @@ import Skills from "../components/sections/Skills";
 
 const IndexPage = ({
   data: {
-    strapiAbout,
-    strapiHome,
-    strapiGlobal,
+    contentfulPage,
     allContentfulProject,
     allContentfulTechnologyCategory,
+    contentfulContact,
   },
 }) => {
   const aboutRef = createRef();
 
+  // Dynamic sections creation
+  let components = [];
+  const sections = contentfulPage.sections;
+  sections.forEach((section, index) => {
+    switch (section.type) {
+      case "hero":
+        components.push(
+          <Header key={index} bio={section.content.childMarkdownRemark.html} />
+        );
+        break;
+      case "basicText":
+        components.push(
+          <About
+            ref={aboutRef}
+            key={index}
+            about={section.content.childMarkdownRemark.html}
+          />
+        );
+        break;
+      case "skills":
+        components.push(
+          <Skills key={index} skills={allContentfulTechnologyCategory.edges} />
+        );
+        break;
+      case "projects":
+        components.push(
+          <Projects key={index} projects={allContentfulProject.edges} />
+        );
+        break;
+      case "contact":
+        components.push(<Contact key={index} contact={contentfulContact} />);
+        break;
+      default:
+        break;
+    }
+  });
+
   return (
     <Layout offset={aboutRef}>
       <SEO
-      // title={strapiHome.seo.title}
-      // description={strapiHome.seo.description}
+        title={contentfulPage.title}
+        description={contentfulPage.description}
       />
-      {/* <Header bio={strapiHome.bio} /> */}
-      {/* <About ref={aboutRef} about={strapiAbout.aboutText} /> */}
-      <Skills skills={allContentfulTechnologyCategory.edges} />
-      <Projects projects={allContentfulProject.edges} />
-      {/* <Contact contact={strapiGlobal} /> */}
+      {components.map(component => component)}
     </Layout>
   );
 };
@@ -40,6 +72,21 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery($language: String) {
+    contentfulPage(name: { eq: "Index" }, node_locale: { eq: $language }) {
+      title
+      name
+      description
+      sections {
+        title
+        type
+        content {
+          childMarkdownRemark {
+            html
+          }
+        }
+      }
+    }
+
     allContentfulProject(filter: { node_locale: { eq: $language } }) {
       edges {
         node {
@@ -48,7 +95,7 @@ export const pageQuery = graphql`
             title
           }
           description {
-          description
+            description
           }
           link
           repo
@@ -75,7 +122,7 @@ export const pageQuery = graphql`
           technology {
             title
             description {
-            description
+              description
             }
             logo {
               localFile {
@@ -84,6 +131,15 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+
+    contentfulContact {
+      email
+      phone
+      socialNetworks {
+        title
+        url
       }
     }
   }

@@ -8,6 +8,7 @@ import styles from "./Contact.module.scss";
 import { FaPhone } from "@react-icons/all-files/fa/FaPhone";
 import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { parsePhoneNumber } from "libphonenumber-js";
 
@@ -19,6 +20,9 @@ const RenderIcon = ({ icon }) => {
     case "Github":
       icon = <FaGithub />;
       break;
+    case "Instagram":
+      icon = <FaInstagram />;
+      break;
     default:
       break;
   }
@@ -26,7 +30,7 @@ const RenderIcon = ({ icon }) => {
 };
 
 const Contact = ({ contact }) => {
-  const phoneNumber = parsePhoneNumber(contact.contactPhone);
+  const phoneNumber = parsePhoneNumber(contact.phone);
   const parsedNumber = phoneNumber.formatInternational();
   return (
     <section id="contact">
@@ -43,10 +47,10 @@ const Contact = ({ contact }) => {
             </a>
             <a
               className={`${styles.contactLink} ${styles.text}`}
-              href={`mailto:${contact.contactEmail}`}
+              href={`mailto:${contact.email}`}
             >
               <Icon icon={<FaEnvelope />} />
-              {contact.contactEmail}
+              {contact.email}
             </a>
           </div>
           <div>
