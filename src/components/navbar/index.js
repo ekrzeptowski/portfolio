@@ -1,11 +1,10 @@
-import { Link } from "gatsby";
 import React, { useState } from "react";
 
 import styles from "./index.module.scss";
 
 import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 
 const NavbarLinks = ({ menuLinks }) => {
   const { t } = useTranslation();
