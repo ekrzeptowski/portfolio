@@ -10,6 +10,8 @@ import Header from "../components/sections/Header";
 import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 
+import { I18nextContext } from "gatsby-plugin-react-i18next";
+
 const IndexPage = ({
   data: {
     contentfulPage,
@@ -19,6 +21,7 @@ const IndexPage = ({
   },
 }) => {
   const aboutRef = createRef();
+  const { language } = React.useContext(I18nextContext);
 
   // Dynamic sections creation
   let components = [];
@@ -59,10 +62,7 @@ const IndexPage = ({
 
   return (
     <Layout offset={aboutRef}>
-      <SEO
-        title={contentfulPage.title}
-        description={contentfulPage.description}
-      />
+      <SEO description={contentfulPage.description} lang={language} />
       {components.map(component => component)}
     </Layout>
   );
