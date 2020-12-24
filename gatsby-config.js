@@ -64,6 +64,14 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: process.env.SITE_ID,
+        matomoUrl: process.env.MATOMO_URL,
+        siteUrl: "https://jkrzeptowski.pl",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
