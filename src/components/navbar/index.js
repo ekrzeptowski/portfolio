@@ -21,13 +21,15 @@ const NavbarLinks = ({ menuLinks }) => {
 
 export function Navbar({ menuLinks }) {
   const mobile = !useMedia({ minWidth: "37.5rem" });
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+
   return (
     <div className={`${styles.navbar} ${expanded ? styles.expanded : ""}`}>
       {mobile && (
         <div className={styles.hamburgerContainer}>
           <Hamburger
-            label="Show menu"
+            label={t("Show menu")}
             toggled={expanded}
             toggle={setExpanded}
           />
