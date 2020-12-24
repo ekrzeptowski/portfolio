@@ -11,7 +11,7 @@ import { Trans } from "gatsby-plugin-react-i18next";
 const Project = ({ project }) => {
   return (
     <div className={styles.projectContainer}>
-      <Img fluid={project.preview.localFile.childImageSharp.fluid} />
+      <Img fluid={project.preview.fluid} />
       <div className={styles.projectContent}>
         <div className={styles.projectContentContainer}>
           <p className={styles.title}>{project.title}</p>

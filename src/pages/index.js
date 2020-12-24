@@ -100,12 +100,8 @@ export const pageQuery = graphql`
           link
           repo
           preview {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 840) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+            fluid(maxWidth: 840) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
