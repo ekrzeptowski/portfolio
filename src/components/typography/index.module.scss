@@ -4,6 +4,7 @@ $rfs-factor: 2;
 .sectionTitle {
     @include font-size(64px);
     font-weight: 300;
+    color: var(--color-primary);
 }
 
 .subTitle {

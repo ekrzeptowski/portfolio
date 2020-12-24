@@ -33,7 +33,7 @@
     color: rgba(var(--color-text-rgb), 0.8);
     text-decoration: none;
   }
-  :not(:last-child):after {
+  &:not(:last-child):after {
     display: block;
     content: "";
     border-bottom: 1px rgba(0, 0, 0, 0.32941) solid;
