@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 
 import { Trans } from "gatsby-plugin-react-i18next";
 
+import styles from "./About.module.scss";
 import { SectionTitle } from "../typography";
 
 const About = forwardRef((props, ref) => {
@@ -10,7 +11,10 @@ const About = forwardRef((props, ref) => {
       <SectionTitle>
         <Trans>About me</Trans>
       </SectionTitle>
-      <div dangerouslySetInnerHTML={{ __html: props.about }}></div>
+      <div
+        className={styles.aboutContent}
+        dangerouslySetInnerHTML={{ __html: props.about }}
+      ></div>
     </section>
   );
 });
