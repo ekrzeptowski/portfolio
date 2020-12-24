@@ -37,6 +37,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: #916aff;
     --color-background: #{$background-dark};
     --color-background-rgb: #{hexToRGB($background-dark)};
     --color-background-secondary: #{$background-secondary-dark};
