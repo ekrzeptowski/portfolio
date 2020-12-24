@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           }}
           className="container"
         >
-          © {new Date().getFullYear()}, Built with
+          {data.site.siteMetadata?.title} {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
