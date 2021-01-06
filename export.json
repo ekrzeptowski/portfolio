@@ -1,0 +1,4841 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "technology",
+        "type": "ContentType",
+        "createdAt": "2020-12-20T15:47:09.637Z",
+        "updatedAt": "2020-12-20T15:47:10.653Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-12-20T15:47:10.653Z",
+        "firstPublishedAt": "2020-12-20T15:47:10.653Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Technology",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "project",
+          "name": "Project",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "project",
+        "type": "ContentType",
+        "createdAt": "2020-12-20T15:56:43.417Z",
+        "updatedAt": "2021-01-04T23:41:52.715Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2021-01-04T23:41:52.715Z",
+        "firstPublishedAt": "2020-12-20T15:56:44.516Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Project",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "technology",
+          "name": "Technology",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "preview",
+          "name": "preview",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "link",
+          "name": "link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "repo",
+          "name": "repo",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "technologyCategory",
+        "type": "ContentType",
+        "createdAt": "2020-12-20T16:38:54.152Z",
+        "updatedAt": "2020-12-20T18:57:04.395Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-12-20T18:57:04.395Z",
+        "firstPublishedAt": "2020-12-20T16:38:55.220Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "type",
+      "name": "Technology category",
+      "description": "",
+      "fields": [
+        {
+          "id": "type",
+          "name": "Type",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "technology",
+          "name": "Technology",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "order",
+          "name": "order",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "test",
+        "type": "ContentType",
+        "createdAt": "2020-12-23T07:38:45.471Z",
+        "updatedAt": "2020-12-23T08:09:51.513Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-12-23T08:09:51.513Z",
+        "firstPublishedAt": "2020-12-23T07:38:46.631Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sections",
+          "name": "Sections",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["sections"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "sections",
+        "type": "ContentType",
+        "createdAt": "2020-12-23T07:50:29.370Z",
+        "updatedAt": "2020-12-23T21:19:36.670Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 23,
+        "publishedAt": "2020-12-23T21:19:36.670Z",
+        "firstPublishedAt": "2020-12-23T07:50:30.023Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "type",
+          "name": "Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["basicText", "contact", "hero", "projects", "skills"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "link",
+        "type": "ContentType",
+        "createdAt": "2020-12-23T20:53:41.026Z",
+        "updatedAt": "2020-12-23T20:53:41.873Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-12-23T20:53:41.873Z",
+        "firstPublishedAt": "2020-12-23T20:53:41.873Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Link",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": ["Github", "Gitlab", "Instagram", "Linkedin"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "contact",
+        "type": "ContentType",
+        "createdAt": "2020-12-23T20:56:32.611Z",
+        "updatedAt": "2020-12-23T20:57:52.932Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-23T20:57:52.932Z",
+        "firstPublishedAt": "2020-12-23T20:56:33.269Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "displayField": "email",
+      "name": "Contact",
+      "description": "",
+      "fields": [
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "Phone",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "socialNetworks",
+          "name": "Social networks",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["link"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-12-20T15:47:10.792Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-20T15:47:11.869Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "technology",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "project",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2020-12-20T15:56:44.624Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-01-04T23:41:53.547Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "project",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "technology",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "preview",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "repo",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-12-20T16:38:55.408Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-20T18:57:05.984Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "technologyCategory",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "type",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "technology",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2020-12-23T07:38:46.825Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-23T08:09:52.244Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "test",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sections",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 24,
+        "createdAt": "2020-12-23T07:50:30.133Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-23T21:19:37.434Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "sections",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "type",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-12-23T20:53:42.003Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-23T20:53:42.763Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "link",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "url",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "bld86y71slfk",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-12-23T20:56:33.381Z",
+        "createdBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-12-23T20:57:53.718Z",
+        "updatedBy": {
+          "sys": {
+            "id": "07DRhIDhYfNssTzKXdAi8g",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "contact",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "email",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "phone",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "socialNetworks",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "4bZPCMN75zZHojiPHfby05",
+        "type": "Entry",
+        "createdAt": "2020-12-20T15:57:20.645Z",
+        "updatedAt": "2021-01-04T23:42:11.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2021-01-04T23:42:11.365Z",
+        "firstPublishedAt": "2020-12-20T16:02:18.124Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "This portfolio",
+          "pl": "To portfolio"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CLa6ogIcPTk2RLeetxat8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "t42q6GtO0fHCToMJxoaPK"
+              }
+            }
+          ]
+        },
+        "preview": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6q5PTg6oxzoAbeCu3Fp9Kv"
+            }
+          }
+        },
+        "link": {
+          "en": "https://jkrzeptowski.pl"
+        },
+        "repo": {
+          "en": "https://github.com/saj96n/portfolio"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5CLa6ogIcPTk2RLeetxat8",
+        "type": "Entry",
+        "createdAt": "2020-12-20T15:57:42.740Z",
+        "updatedAt": "2020-12-24T10:36:15.256Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:36:15.256Z",
+        "firstPublishedAt": "2020-12-20T16:00:35.808Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "React"
+        },
+        "description": {
+          "en": "React is an open-source, front end, JavaScript library for building user interfaces or UI components",
+          "pl": "React.js – biblioteka języka programowania JavaScript, która wykorzystywana jest do tworzenia interfejsów graficznych aplikacji internetowych"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2LMNrOtKex3XHAk4AXkVME"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "t42q6GtO0fHCToMJxoaPK",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:23:08.065Z",
+        "updatedAt": "2020-12-24T10:33:57.347Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-12-24T10:33:57.347Z",
+        "firstPublishedAt": "2020-12-20T16:23:37.724Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Gatsby"
+        },
+        "description": {
+          "en": "Gatsby is a free and open-source framework based on React that helps developers build blazing-fast websites and apps",
+          "pl": "Gatsby to framework pozwalający na budowanie błyskawicznie działających stron i aplikacji internetowych opartych o React JS"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1nNIe7bgBmbk6Ht9iOHse8"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "37fScny6jnQAcQa7IIjlzg",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:23:42.477Z",
+        "updatedAt": "2020-12-24T10:36:01.182Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:36:01.182Z",
+        "firstPublishedAt": "2020-12-20T16:24:44.652Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Node.js"
+        },
+        "description": {
+          "en": "Node.js is an open-source, cross-platform, back-end, JavaScript runtime environment that executes JavaScript code outside a web browser",
+          "pl": "Node.js – wieloplatformowe środowisko uruchomieniowe o otwartym kodzie do tworzenia aplikacji typu server-side napisanych w języku JavaScript"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "35bUypJINNkywsttqTDWOT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "74n6d7DYeIgED8X1CqQLVv",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:24:48.816Z",
+        "updatedAt": "2020-12-24T10:35:50.120Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:35:50.120Z",
+        "firstPublishedAt": "2020-12-20T16:25:44.213Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "MongoDB"
+        },
+        "description": {
+          "en": "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas",
+          "pl": "MongoDB – otwarty, nierelacyjny system zarządzania bazą danych napisany w języku C++. Charakteryzuje się dużą skalowalnością, wydajnością oraz brakiem ściśle zdefiniowanej struktury obsługiwanych baz danych"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5xrE4v6cZkKCFLSp2Yjd6H"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5sJ1QLqtPV6Q4JGkFnTaqv",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:25:56.197Z",
+        "updatedAt": "2020-12-24T10:35:35.874Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-12-24T10:35:35.874Z",
+        "firstPublishedAt": "2020-12-20T16:27:15.582Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Git"
+        },
+        "description": {
+          "en": "Git is a distributed version-control system for tracking changes in any set of files, originally designed for coordinating work among programmers cooperating on source code during software development",
+          "pl": "Git – rozproszony system kontroli wersji"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1093WvVD7T7F77fYEZEKoE"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6x2JZUgDRk8cPjQwlZWPCp",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:27:27.202Z",
+        "updatedAt": "2020-12-24T10:35:21.780Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:35:21.780Z",
+        "firstPublishedAt": "2020-12-20T16:28:08.358Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Express.js"
+        },
+        "description": {
+          "en": "Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs",
+          "pl": "Express to popularny framework webowy stworzony w języku JavaScript działający w środowisku uruchomieniowym Node.js"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1NP6HRY0ha2BS9o65QYkCU"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "4OCtnvjRQsYomp4IfRQ2MG",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:28:29.544Z",
+        "updatedAt": "2020-12-24T10:35:10.452Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-12-24T10:35:10.452Z",
+        "firstPublishedAt": "2020-12-20T16:29:18.250Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "GraphQL"
+        },
+        "description": {
+          "en": "GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data",
+          "pl": "GraphQL to język zapytań, który udostępnia wspólny interfejs pomiędzy klientem, a serwerem do pobierania i manipulowania danymi. Zaprojektowany został tak aby zapewnić intuicyjną i elastyczną składnię"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "65tc6ygRwFqP70ZXTqBTKr"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "7JPb993HBxFJDZDBwQl8D8",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:29:28.832Z",
+        "updatedAt": "2020-12-24T10:34:50.640Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:34:50.640Z",
+        "firstPublishedAt": "2020-12-20T16:29:56.234Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Redux"
+        },
+        "description": {
+          "en": "Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces",
+          "pl": "Redux to \"przewidywalny, scentralizowany, łatwy do debugowania i elastyczny\" manager stanu. Jednym z założeń React jest jednokierunkowy przepływ danych w aplikacji - wszelkie dane wpływają do naszego komponentu, który nie powinien ich mutować - jeżeli potrzebuje je zaktualizować, wykonuje to poprzez wywołanie this"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5vNOKMH38vDqgZENHGTpY1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "4DlxTE9XRyUJlAOYm5Q8PH",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:30:03.317Z",
+        "updatedAt": "2020-12-24T10:34:35.850Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-24T10:34:35.850Z",
+        "firstPublishedAt": "2020-12-20T16:30:33.159Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Next.js"
+        },
+        "description": {
+          "en": "Next.js is an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications",
+          "pl": "Next. js to minimalistyczny framework, który pozwala budować nowoczesne aplikacje z możliwością generowania po stronie serwera, wykorzystując bibliotekę React, webpack i Babel"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "63O9TVyzFdXUwjCQ8CNgP0"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1eFx7ndACYts8bB0Nx7sHI",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:30:37.382Z",
+        "updatedAt": "2020-12-24T10:34:21.196Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-12-24T10:34:21.196Z",
+        "firstPublishedAt": "2020-12-20T16:31:08.285Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Javascript"
+        },
+        "description": {
+          "en": "JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm",
+          "pl": "JavaScript (JS) to skryptowy (interpretowany lub kompilowany metodą JIT) język programowania, w którym funkcje są \"obywatelami pierwszej kategorii\" - obiektami, które można przechowywać w zmiennych jako referencje i przekazywać jak każde inne obiekty"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "48bK3BE7415EgqLZt52nxs"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "7pnkWlH78SsutNPjwJIG6r",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:31:19.043Z",
+        "updatedAt": "2020-12-20T16:32:25.181Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:32:25.181Z",
+        "firstPublishedAt": "2020-12-20T16:32:25.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "CSS3"
+        },
+        "description": {
+          "en": "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML",
+          "pl": "Kaskadowe arkusze stylów – język służący do opisu formy prezentacji stron WWW"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "o7CYFSbSHzCGp78tqeMm5"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6HgTcBXwS7Wd1h0NKwaF5d",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:32:43.558Z",
+        "updatedAt": "2020-12-20T16:33:35.433Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:33:35.433Z",
+        "firstPublishedAt": "2020-12-20T16:33:35.433Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "HTML5"
+        },
+        "description": {
+          "en": "HTML5 is a markup language used for structuring and presenting content on the World Wide Web",
+          "pl": "HTML5 – język wykorzystywany do tworzenia i prezentowania stron internetowych www"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3xwSfvjnQee10szK1lBn4O"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1rdXzNilxdtmH6PO8Dh9sv",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:33:47.633Z",
+        "updatedAt": "2020-12-20T16:36:02.278Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:36:02.278Z",
+        "firstPublishedAt": "2020-12-20T16:36:02.278Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "ES6"
+        },
+        "description": {
+          "en": "ECMAScript is a general-purpose programming language, standardized by Ecma International according to the document ECMA-262",
+          "pl": "ECMAScript – stworzona przez ECMA ustandaryzowana specyfikacja skryptowego języka programowania, której najbardziej znane implementacje to JavaScript, JScript i ActionScript"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5sfAO7yyUsIpBximCZNbE6"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "4JdXefA0vEYqtNpsKWI18y",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:36:18.044Z",
+        "updatedAt": "2020-12-24T10:19:18.550Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-12-24T10:19:18.550Z",
+        "firstPublishedAt": "2020-12-20T16:37:02.677Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technology"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Webpack"
+        },
+        "description": {
+          "en": "webpack is an open-source JavaScript module bundler. It is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included",
+          "pl": "Webpack – darmowy i otwarty transpilator JavaScript, którego głównym celem jest tworzenie pakietów, które uwzględnią zależności między modułami i klasami oraz poprawiają wydajność. Co prawda Webpack służy głównie do budowania pakietu JS, ale może przetwarzać również inne zasoby takie jak HTML, CSS i obrazki"
+        },
+        "logo": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "X1NkWME4KPJkmsXqtWwAz"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2ramXV7JyzdQVamlemiaVn",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:39:10.766Z",
+        "updatedAt": "2020-12-20T18:57:32.940Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-20T18:57:32.940Z",
+        "firstPublishedAt": "2020-12-20T16:40:06.091Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technologyCategory"
+          }
+        }
+      },
+      "fields": {
+        "type": {
+          "en": "Languages",
+          "pl": "Języki"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6HgTcBXwS7Wd1h0NKwaF5d"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7pnkWlH78SsutNPjwJIG6r"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1eFx7ndACYts8bB0Nx7sHI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1rdXzNilxdtmH6PO8Dh9sv"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en": 1
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "0MCGxRNp358Bf9geCXB9e",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:40:19.047Z",
+        "updatedAt": "2020-12-20T18:57:45.551Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-20T18:57:45.551Z",
+        "firstPublishedAt": "2020-12-20T16:41:07.072Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technologyCategory"
+          }
+        }
+      },
+      "fields": {
+        "type": {
+          "en": "Front-End"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CLa6ogIcPTk2RLeetxat8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7JPb993HBxFJDZDBwQl8D8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "t42q6GtO0fHCToMJxoaPK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4DlxTE9XRyUJlAOYm5Q8PH"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en": 2
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6gEHixOw81R9MM25B9pgbB",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:41:12.201Z",
+        "updatedAt": "2020-12-20T18:57:53.616Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-12-20T18:57:53.616Z",
+        "firstPublishedAt": "2020-12-20T16:42:42.129Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technologyCategory"
+          }
+        }
+      },
+      "fields": {
+        "type": {
+          "en": "Back-End"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "37fScny6jnQAcQa7IIjlzg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6x2JZUgDRk8cPjQwlZWPCp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4OCtnvjRQsYomp4IfRQ2MG"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en": 3
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2dagvObW1CVDM1zURX8yDU",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:42:59.102Z",
+        "updatedAt": "2020-12-20T18:58:16.696Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-20T18:58:16.696Z",
+        "firstPublishedAt": "2020-12-20T16:43:32.676Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technologyCategory"
+          }
+        }
+      },
+      "fields": {
+        "type": {
+          "en": "Database",
+          "pl": "Bazy danych"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "74n6d7DYeIgED8X1CqQLVv"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en": 4
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2blzjRtGAC0o1JVZc0b0Y4",
+        "type": "Entry",
+        "createdAt": "2020-12-20T16:43:36.748Z",
+        "updatedAt": "2020-12-20T18:58:26.737Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-20T18:58:26.737Z",
+        "firstPublishedAt": "2020-12-20T16:44:15.023Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "technologyCategory"
+          }
+        }
+      },
+      "fields": {
+        "type": {
+          "en": "Tools",
+          "pl": "Narzędzia"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5sJ1QLqtPV6Q4JGkFnTaqv"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4JdXefA0vEYqtNpsKWI18y"
+              }
+            }
+          ]
+        },
+        "order": {
+          "en": 5
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5hdqDAO3c1qBqp2gdv3JPL",
+        "type": "Entry",
+        "createdAt": "2020-12-20T17:12:17.655Z",
+        "updatedAt": "2021-01-04T23:41:07.070Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2021-01-04T23:41:07.070Z",
+        "firstPublishedAt": "2020-12-20T17:14:43.820Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Social assistant"
+        },
+        "description": {
+          "en": "Social assistant is an app created to help you get insights on your followers.",
+          "pl": "Aplikacja ułatwiająca analizę osób obserwujących na Twitterze"
+        },
+        "technology": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7JPb993HBxFJDZDBwQl8D8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5CLa6ogIcPTk2RLeetxat8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "74n6d7DYeIgED8X1CqQLVv"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "t42q6GtO0fHCToMJxoaPK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6x2JZUgDRk8cPjQwlZWPCp"
+              }
+            }
+          ]
+        },
+        "preview": {
+          "en": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3EJAQJi7NXKcMt9Ku9C5ln"
+            }
+          }
+        },
+        "link": {
+          "en": "https://socialassist.ml"
+        },
+        "repo": {
+          "en": "https://github.com/saj96n/social-assist-ui"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "3nxsMxo6y8sGeSuBksoF59",
+        "type": "Entry",
+        "createdAt": "2020-12-23T08:05:41.676Z",
+        "updatedAt": "2020-12-23T18:22:24.897Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2020-12-23T18:22:24.897Z",
+        "firstPublishedAt": "2020-12-23T08:06:51.016Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sections"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Hero",
+          "pl": "Hero"
+        },
+        "type": {
+          "en": "hero"
+        },
+        "content": {
+          "en": "## Hello, I'm\n# Jan Krzeptowski\n### A front-end developer",
+          "pl": "## Cześć, Jestem\n# Jan Krzeptowski\n### Programista front-end"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2WxcD2dqvTfGvED4Byc4X5",
+        "type": "Entry",
+        "createdAt": "2020-12-23T08:07:07.201Z",
+        "updatedAt": "2020-12-24T14:27:39.810Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 45,
+        "publishedAt": "2020-12-24T14:27:39.810Z",
+        "firstPublishedAt": "2020-12-23T08:08:23.650Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 46,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sections"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "About",
+          "pl": "O mnie"
+        },
+        "type": {
+          "en": "basicText"
+        },
+        "content": {
+          "en": "My name is Jan, and I'm a self-taught front-end developer based in Krakow, Poland.\n\nIn my free time, besides programming, I like to travel around the globe and take photos.\n\nI love learning new things, and I'm a fan of modern technologies. ",
+          "pl": "Nazywam się Jan, jestem programistą Front-End.\n\nW wolnym czasie, oprócz programowania, lubię podróżować i poznawać nowe kraje. Pasjonuję się także fotografią.\n\nLubię uczyć się nowych rzeczy oraz jestem fanem nowych technologii."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "kMQ5eipnXzQ8827KPLO59",
+        "type": "Entry",
+        "createdAt": "2020-12-23T08:08:28.958Z",
+        "updatedAt": "2020-12-24T14:34:35.287Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 26,
+        "publishedAt": "2020-12-24T14:34:35.287Z",
+        "firstPublishedAt": "2020-12-23T08:09:32.540Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "test"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en": "Index"
+        },
+        "sections": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3nxsMxo6y8sGeSuBksoF59"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2WxcD2dqvTfGvED4Byc4X5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2EIrc5YFoLWkYOCUWzrGmt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3eU6kmDdfj3ZV1zbNfEc3i"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5fwktqX5aivkYjtmOoPc25"
+              }
+            }
+          ]
+        },
+        "title": {
+          "en": "Jan Krzeptowski",
+          "pl": "Jan Krzeptowski"
+        },
+        "description": {
+          "en": "Jan Krzeptowski is a self-taught front-end developer based in Krakow, Poland",
+          "pl": "Jan Krzeptowski jest programistą front-end"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "3eU6kmDdfj3ZV1zbNfEc3i",
+        "type": "Entry",
+        "createdAt": "2020-12-23T19:09:13.446Z",
+        "updatedAt": "2020-12-23T21:18:33.481Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-23T21:18:33.481Z",
+        "firstPublishedAt": "2020-12-23T19:09:50.860Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sections"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Projects",
+          "pl": "Projekty"
+        },
+        "type": {
+          "en": "projects"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5fwktqX5aivkYjtmOoPc25",
+        "type": "Entry",
+        "createdAt": "2020-12-23T20:23:22.116Z",
+        "updatedAt": "2020-12-23T21:18:56.820Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-23T21:18:56.820Z",
+        "firstPublishedAt": "2020-12-23T21:18:56.820Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sections"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Contact",
+          "pl": "Kontakt"
+        },
+        "type": {
+          "en": "contact"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6F7BzTt7AzwwO9qQhk0ENO",
+        "type": "Entry",
+        "createdAt": "2020-12-23T20:56:39.807Z",
+        "updatedAt": "2020-12-23T21:00:10.975Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-12-23T21:00:10.975Z",
+        "firstPublishedAt": "2020-12-23T20:57:03.901Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contact"
+          }
+        }
+      },
+      "fields": {
+        "email": {
+          "en": "contact@jkrzeptowski.pl"
+        },
+        "phone": {
+          "en": "+48732256128"
+        },
+        "socialNetworks": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5Psw4Wim5ReXXtlh5Uv1Yw"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7MS5TP4f7QW7SViy6VNq7x"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6b3ZFQJrIMPHFekHZm6PZ1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5Psw4Wim5ReXXtlh5Uv1Yw",
+        "type": "Entry",
+        "createdAt": "2020-12-23T20:58:06.847Z",
+        "updatedAt": "2020-12-23T20:58:31.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-23T20:58:31.047Z",
+        "firstPublishedAt": "2020-12-23T20:58:31.047Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Github"
+        },
+        "url": {
+          "en": "https://github.com/saj96n"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "7MS5TP4f7QW7SViy6VNq7x",
+        "type": "Entry",
+        "createdAt": "2020-12-23T20:58:45.863Z",
+        "updatedAt": "2020-12-23T20:59:02.838Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-23T20:59:02.838Z",
+        "firstPublishedAt": "2020-12-23T20:59:02.838Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Linkedin"
+        },
+        "url": {
+          "en": "https://www.linkedin.com/in/jan-krzeptowski-7152a011b/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6b3ZFQJrIMPHFekHZm6PZ1",
+        "type": "Entry",
+        "createdAt": "2020-12-23T20:59:23.978Z",
+        "updatedAt": "2020-12-23T21:00:05.297Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-23T21:00:05.297Z",
+        "firstPublishedAt": "2020-12-23T21:00:05.297Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "link"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Instagram"
+        },
+        "url": {
+          "en": "https://instagr.am/saj96n"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2EIrc5YFoLWkYOCUWzrGmt",
+        "type": "Entry",
+        "createdAt": "2020-12-23T21:23:22.014Z",
+        "updatedAt": "2020-12-23T21:23:38.676Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-23T21:23:38.676Z",
+        "firstPublishedAt": "2020-12-23T21:23:38.676Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "sections"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Skills",
+          "pl": "Umiejętności"
+        },
+        "type": {
+          "en": "skills"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "2LMNrOtKex3XHAk4AXkVME",
+        "type": "Asset",
+        "createdAt": "2020-12-20T15:58:38.177Z",
+        "updatedAt": "2020-12-20T16:00:31.370Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:00:31.370Z",
+        "firstPublishedAt": "2020-12-20T16:00:31.370Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "react"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/2LMNrOtKex3XHAk4AXkVME/d090f8ffed1904d2b2d3305099dc174f/react.svg",
+            "details": {
+              "size": 7909,
+              "image": {
+                "width": 256,
+                "height": 228
+              }
+            },
+            "fileName": "react.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "6q5PTg6oxzoAbeCu3Fp9Kv",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:01:28.181Z",
+        "updatedAt": "2020-12-20T16:01:47.830Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:01:47.830Z",
+        "firstPublishedAt": "2020-12-20T16:01:47.830Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "portfolio"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/6q5PTg6oxzoAbeCu3Fp9Kv/69f5b3b6e34f676384657eb54f78517d/localhost_40990__laptop_hdpi_.png",
+            "details": {
+              "size": 148668,
+              "image": {
+                "width": 2732,
+                "height": 1536
+              }
+            },
+            "fileName": "localhost_40990_(laptop hdpi).png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1nNIe7bgBmbk6Ht9iOHse8",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:23:16.459Z",
+        "updatedAt": "2020-12-20T16:23:28.936Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:23:28.936Z",
+        "firstPublishedAt": "2020-12-20T16:23:28.936Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "gatsby"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/1nNIe7bgBmbk6Ht9iOHse8/118b740c16a8bfe43f467437175f87ec/gatsby.svg",
+            "details": {
+              "size": 1176,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "gatsby.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "35bUypJINNkywsttqTDWOT",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:24:18.747Z",
+        "updatedAt": "2020-12-20T16:24:37.660Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:24:37.660Z",
+        "firstPublishedAt": "2020-12-20T16:24:37.660Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "nodejs"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/35bUypJINNkywsttqTDWOT/c8631ecf22c8773d6dca007506a312bb/nodejs-icon.svg",
+            "details": {
+              "size": 3356,
+              "image": {
+                "width": 256,
+                "height": 289
+              }
+            },
+            "fileName": "nodejs-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5xrE4v6cZkKCFLSp2Yjd6H",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:25:11.164Z",
+        "updatedAt": "2020-12-20T16:25:35.446Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:25:35.446Z",
+        "firstPublishedAt": "2020-12-20T16:25:35.446Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "mongodb"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/5xrE4v6cZkKCFLSp2Yjd6H/ad5a84f4885bf4a24250d0d626129c0b/mongodb.svg",
+            "details": {
+              "size": 18988,
+              "image": {
+                "width": 512,
+                "height": 146
+              }
+            },
+            "fileName": "mongodb.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1093WvVD7T7F77fYEZEKoE",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:26:45.158Z",
+        "updatedAt": "2020-12-20T16:27:04.591Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-12-20T16:27:04.591Z",
+        "firstPublishedAt": "2020-12-20T16:27:04.591Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "git"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/1093WvVD7T7F77fYEZEKoE/d755726c1a0a027ae206e753a0cec84c/git-icon.svg",
+            "details": {
+              "size": 1709,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "git-icon.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1NP6HRY0ha2BS9o65QYkCU",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:27:35.112Z",
+        "updatedAt": "2020-12-20T16:27:51.009Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:27:51.009Z",
+        "firstPublishedAt": "2020-12-20T16:27:51.009Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "express"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/1NP6HRY0ha2BS9o65QYkCU/4c7fa08046586443a11d26ae88643a4f/express.svg",
+            "details": {
+              "size": 11556,
+              "image": {
+                "width": 512,
+                "height": 149
+              }
+            },
+            "fileName": "express.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "65tc6ygRwFqP70ZXTqBTKr",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:28:48.806Z",
+        "updatedAt": "2020-12-20T16:29:12.007Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:29:12.007Z",
+        "firstPublishedAt": "2020-12-20T16:29:12.007Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "graphql"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/65tc6ygRwFqP70ZXTqBTKr/7384e689fa84e48247aa283a15d9e352/graphql.svg",
+            "details": {
+              "size": 3565,
+              "image": {
+                "width": 256,
+                "height": 288
+              }
+            },
+            "fileName": "graphql.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5vNOKMH38vDqgZENHGTpY1",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:29:39.532Z",
+        "updatedAt": "2020-12-20T16:29:51.500Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:29:51.500Z",
+        "firstPublishedAt": "2020-12-20T16:29:51.500Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "redux"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/5vNOKMH38vDqgZENHGTpY1/100fa4e2969814d47bbefd3f26e3b6e6/redux.svg",
+            "details": {
+              "size": 3222,
+              "image": {
+                "width": 256,
+                "height": 244
+              }
+            },
+            "fileName": "redux.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "63O9TVyzFdXUwjCQ8CNgP0",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:30:16.247Z",
+        "updatedAt": "2020-12-20T16:30:28.528Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:30:28.528Z",
+        "firstPublishedAt": "2020-12-20T16:30:28.528Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "nextjs"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/63O9TVyzFdXUwjCQ8CNgP0/43fe0f98e27fc7cd3c7d99dea97bdb97/nextjs.svg",
+            "details": {
+              "size": 2850,
+              "image": {
+                "width": 512,
+                "height": 309
+              }
+            },
+            "fileName": "nextjs.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "48bK3BE7415EgqLZt52nxs",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:30:51.670Z",
+        "updatedAt": "2020-12-20T16:31:03.802Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:31:03.802Z",
+        "firstPublishedAt": "2020-12-20T16:31:03.802Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "javascript"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/48bK3BE7415EgqLZt52nxs/d8b4569f382111dff3e9085fceb65bc7/javascript.svg",
+            "details": {
+              "size": 1705,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "javascript.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "o7CYFSbSHzCGp78tqeMm5",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:31:47.182Z",
+        "updatedAt": "2020-12-20T16:32:17.858Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:32:17.858Z",
+        "firstPublishedAt": "2020-12-20T16:32:17.858Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "css-3"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/o7CYFSbSHzCGp78tqeMm5/9ffd275f9bc72f322ee9cc6cf0ab0b0e/css-3.svg",
+            "details": {
+              "size": 2503,
+              "image": {
+                "width": 256,
+                "height": 361
+              }
+            },
+            "fileName": "css-3.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "3xwSfvjnQee10szK1lBn4O",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:33:14.123Z",
+        "updatedAt": "2020-12-20T16:33:28.475Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:33:28.475Z",
+        "firstPublishedAt": "2020-12-20T16:33:28.475Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "html-5"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/3xwSfvjnQee10szK1lBn4O/7f78a197c50d4bb91f869ce45137ff0b/html-5.svg",
+            "details": {
+              "size": 2817,
+              "image": {
+                "width": 256,
+                "height": 361
+              }
+            },
+            "fileName": "html-5.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "5sfAO7yyUsIpBximCZNbE6",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:34:22.265Z",
+        "updatedAt": "2020-12-20T16:35:48.798Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:35:48.798Z",
+        "firstPublishedAt": "2020-12-20T16:35:48.798Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "es6"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/5sfAO7yyUsIpBximCZNbE6/14a97c339e8a59a9cad495fbfef3029a/es6.svg",
+            "details": {
+              "size": 2632,
+              "image": {
+                "width": 256,
+                "height": 256
+              }
+            },
+            "fileName": "es6.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "1wzZKInjTKpPmywzZ74Hsg",
+        "type": "Asset",
+        "createdAt": "2020-12-20T16:36:42.979Z",
+        "updatedAt": "2020-12-20T16:36:57.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-12-20T16:36:57.116Z",
+        "firstPublishedAt": "2020-12-20T16:36:57.116Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "html-5"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/1wzZKInjTKpPmywzZ74Hsg/f1e0de4de3669dec319e65d0d31effcc/html-5.svg",
+            "details": {
+              "size": 2817,
+              "image": {
+                "width": 256,
+                "height": 361
+              }
+            },
+            "fileName": "html-5.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "3EJAQJi7NXKcMt9Ku9C5ln",
+        "type": "Asset",
+        "createdAt": "2020-12-20T17:14:06.737Z",
+        "updatedAt": "2020-12-20T17:14:26.754Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-12-20T17:14:26.754Z",
+        "firstPublishedAt": "2020-12-20T17:14:26.754Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "social-assist"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/3EJAQJi7NXKcMt9Ku9C5ln/8cfa1b1fc1b781f375a0d3c71185f67f/localhost_3000_.png",
+            "details": {
+              "size": 282185,
+              "image": {
+                "width": 2420,
+                "height": 1550
+              }
+            },
+            "fileName": "localhost_3000_.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "id": "X1NkWME4KPJkmsXqtWwAz",
+        "type": "Asset",
+        "createdAt": "2020-12-24T10:17:02.357Z",
+        "updatedAt": "2020-12-24T10:18:49.052Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-12-24T10:18:49.052Z",
+        "firstPublishedAt": "2020-12-24T10:18:49.052Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en": "Webpack",
+          "pl": "Webpack"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/bld86y71slfk/X1NkWME4KPJkmsXqtWwAz/8ccca392a8420074eeae7c6f27b29469/webpack.svg",
+            "details": {
+              "size": 1666,
+              "image": {
+                "width": 256,
+                "height": 290
+              }
+            },
+            "fileName": "webpack.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English",
+      "code": "en",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5TlesIfeJQKb2JWJxf1d4q",
+        "version": 2,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "3057482f-c9d6-498e-82ad-c49569802677"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "createdAt": "2020-12-20T15:41:31Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedAt": "2020-12-20T16:22:24Z"
+      }
+    },
+    {
+      "name": "Polish",
+      "code": "pl",
+      "fallbackCode": "en",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2sQ8wWlsYRqITnbGNM8wqn",
+        "version": 3,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "3057482f-c9d6-498e-82ad-c49569802677"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "createdAt": "2020-12-20T16:21:19Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedAt": "2020-12-20T16:22:32Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5TmgcT6yOY0G9Jku4ilJ0y",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "bld86y71slfk"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "createdAt": "2020-12-20T15:41:31Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "07DRhIDhYfNssTzKXdAi8g"
+          }
+        },
+        "updatedAt": "2020-12-20T15:41:31Z"
+      }
+    }
+  ]
+}
