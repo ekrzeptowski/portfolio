@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const { githubApiQuery } = require("./github-query");
+
 module.exports = {
   siteMetadata: {
     title: `Jan Krzeptowski`,
@@ -70,6 +72,16 @@ module.exports = {
         siteId: process.env.SITE_ID,
         matomoUrl: process.env.MATOMO_URL,
         siteUrl: "https://jkrzeptowski.pl",
+      },
+    },
+    {
+      resolve: "gatsby-source-github-api",
+      options: {
+        token: process.env.GITHUB_TOKEN,
+        graphQLQuery: githubApiQuery,
+        variables: {
+          user: process.env.GITHUB_USER,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

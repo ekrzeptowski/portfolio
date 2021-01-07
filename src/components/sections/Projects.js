@@ -1,12 +1,16 @@
 import React from "react";
 import Project from "../project";
-import { SectionTitle } from "../typography";
+import { SectionTitle, SubTitle } from "../typography";
 
 import { Trans } from "gatsby-plugin-react-i18next";
 
 import styles from "./Projects.module.scss";
 
-const Projects = ({ projects }) => {
+import { Masonry } from "masonic";
+
+import { RepoCard } from "react-repo-widget";
+
+const Projects = ({ projects, githubUser }) => {
   return (
     <section id="projects">
       <SectionTitle>
@@ -19,6 +23,18 @@ const Projects = ({ projects }) => {
           return <Project key={project.title} project={project} />;
         })}
       </div>
+      <SubTitle>
+        <Trans>My GitHub projects</Trans>
+      </SubTitle>
+      <Masonry
+        items={githubUser.repositories.nodes}
+        style={{ outline: "none" }}
+        columnGutter={5}
+        render={({ index, data }) => (
+          <RepoCard key={index} center repo={data} />
+        )}
+        columnWidth={360}
+      />
     </section>
   );
 };

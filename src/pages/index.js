@@ -18,10 +18,13 @@ const IndexPage = ({
     allContentfulProject,
     allContentfulTechnologyCategory,
     contentfulContact,
+    allGithubData,
   },
 }) => {
   const aboutRef = createRef();
   const { language } = React.useContext(I18nextContext);
+
+  const githubUser = allGithubData.nodes[0].data.user;
 
   // Dynamic sections creation
   let components = [];
@@ -49,7 +52,11 @@ const IndexPage = ({
         break;
       case "projects":
         components.push(
-          <Projects key={index} projects={allContentfulProject.edges} />
+          <Projects
+            key={index}
+            projects={allContentfulProject.edges}
+            githubUser={githubUser}
+          />
         );
         break;
       case "contact":
@@ -123,6 +130,39 @@ export const pageQuery = graphql`
             logo {
               localFile {
                 publicURL
+              }
+            }
+          }
+        }
+      }
+    }
+
+    allGithubData {
+      nodes {
+        data {
+          user {
+            repositories {
+              nodes {
+                description
+                name
+                stargazerCount
+                watchers {
+                  totalCount
+                }
+                pushedAt
+                primaryLanguage {
+                  name
+                }
+                owner {
+                  avatarUrl
+                  login
+                }
+                licenseInfo {
+                  spdxId
+                }
+                forks {
+                  totalCount
+                }
               }
             }
           }
