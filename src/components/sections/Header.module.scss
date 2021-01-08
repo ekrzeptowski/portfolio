@@ -3,6 +3,7 @@ $rfs-factor: 20;
 
 .headerContainer {
   height: 100vh;
+  min-height: -webkit-fill-available;
   margin-bottom: 100px;
   display: flex;
   align-items: center;
