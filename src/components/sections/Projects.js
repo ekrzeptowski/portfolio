@@ -39,7 +39,7 @@ const Projects = ({ projects, githubUser }) => {
         columnClassName={styles.gridColumn}
       >
         {githubUser.repositories.nodes.map((repo) => (
-          <RepoCard center repo={repo} />
+          <RepoCard center key={repo.name} repo={repo} />
         ))}
       </Masonry>
     </section>

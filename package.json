@@ -41,7 +41,7 @@
     "react-hook-form": "^6.13.1",
     "react-i18next": "^11.8.4",
     "react-masonry-css": "^1.0.14",
-    "react-repo-widget": "^1.0.5",
+    "react-repo-widget": "^1.0.6",
     "rfs": "^9.0.3",
     "rimraf": "^3.0.2",
     "typeface-lato": "^1.1.13",
