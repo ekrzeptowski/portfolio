@@ -3,3 +3,15 @@
   justify-content: center;
   flex-direction: column;
 }
+.gridContainer {
+  display: flex;
+  margin-left: -8px;
+  width: auto;
+}
+.gridColumn {
+  padding-left: 8px;
+  background-clip: padding-box;
+  > div {
+    margin-bottom: 8px!important;
+  }
+}

@@ -6,9 +6,16 @@ import { Trans } from "gatsby-plugin-react-i18next";
 
 import styles from "./Projects.module.scss";
 
-import { Masonry } from "masonic";
+import Masonry from "react-masonry-css";
 
 import { RepoCard } from "react-repo-widget";
+
+const breakpointColumns = {
+  default: 3,
+  1100: 3,
+  960: 2,
+  750: 1,
+};
 
 const Projects = ({ projects, githubUser }) => {
   return (
@@ -18,7 +25,7 @@ const Projects = ({ projects, githubUser }) => {
       </SectionTitle>
       {/* <SubTitle>TODO: Filter bar</SubTitle> */}
       <div className={styles.projectsContainer}>
-        {projects.map(project => {
+        {projects.map((project) => {
           project = project.node;
           return <Project key={project.title} project={project} />;
         })}
@@ -27,14 +34,14 @@ const Projects = ({ projects, githubUser }) => {
         <Trans>My GitHub projects</Trans>
       </SubTitle>
       <Masonry
-        items={githubUser.repositories.nodes}
-        style={{ outline: "none" }}
-        columnGutter={5}
-        render={({ index, data }) => (
-          <RepoCard key={index} center repo={data} />
-        )}
-        columnWidth={360}
-      />
+        breakpointCols={breakpointColumns}
+        className={styles.gridContainer}
+        columnClassName={styles.gridColumn}
+      >
+        {githubUser.repositories.nodes.map((repo) => (
+          <RepoCard center repo={repo} />
+        ))}
+      </Masonry>
     </section>
   );
 };
