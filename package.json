@@ -6,6 +6,7 @@
   "author": "Jan Krzeptowski <saj96n@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.1.4",
+    "@fontsource/lato": "^4.1.0",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-icons/all-files": "^4.1.0",
     "@storybook/preset-scss": "^1.0.3",
@@ -44,7 +45,6 @@
     "react-repo-widget": "^1.0.7",
     "rfs": "^9.0.3",
     "rimraf": "^3.0.2",
-    "typeface-lato": "^1.1.13",
     "use-media": "^1.4.0"
   },
   "devDependencies": {
