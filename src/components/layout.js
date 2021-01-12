@@ -13,7 +13,7 @@ import "normalize.css";
 import "./layout.scss";
 import { Navbar } from "./navbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, style }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,12 +34,13 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata?.title || `Title`}
         menuLinks={data.site.siteMetadata?.menuLinks}
       />
-      <div>
+      <div style={style}>
         <main className="container">{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
-            padding: `10px 5px`,
+            padding: `25px 5px`,
+            textAlign: "center",
           }}
           className="container"
         >
