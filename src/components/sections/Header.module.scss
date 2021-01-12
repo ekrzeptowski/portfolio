@@ -1,4 +1,5 @@
 @import "~rfs/scss";
+@import "../../common/variables";
 $rfs-factor: 20;
 
 .headerContainer {
@@ -59,5 +60,24 @@ $rfs-factor: 20;
   }
   & > h2 {
     @include font-size(34px);
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  svg {
+    max-width: 260px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $media-sm) {
+  .headerWrapper {
+    flex-direction: row;
+    svg {
+      max-width: none;
+    }
   }
 }
