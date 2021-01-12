@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../contactForm";
 import { Icon } from "../icon";
-import { SectionTitle, SubTitle } from "../typography";
+import { SectionTitle } from "../typography";
 
 import styles from "./Contact.module.scss";
 
@@ -58,9 +58,6 @@ const Contact = ({ contact }) => {
             </a>
           </div>
           <div>
-            <SubTitle>
-              <Trans>Social</Trans>
-            </SubTitle>
             {contact.socialNetworks.map(link => (
               <a
                 key={link.url}
