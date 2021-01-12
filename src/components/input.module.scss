@@ -3,7 +3,7 @@ $shadow: 0 1px 5px 0 #1e1e1e4a;
 .input {
   all: unset;
   border: none;
-  box-shadow: 0 0 0 2px currentColor inset, $shadow;
+  box-shadow: 0 0 0 1px var(--color-border) inset, $shadow;
   color: rgba(var(--color-text-rgb), 0.85);
   background: var(--color-background-secondary);
   border-radius: 10px;
@@ -13,7 +13,7 @@ $shadow: 0 1px 5px 0 #1e1e1e4a;
   position: relative;
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 4px var(--color-primary) inset, $shadow;
+    box-shadow: 0 0 0 3px var(--color-primary) inset, $shadow;
   }
 }
 

@@ -72,7 +72,7 @@
     background: unset;
     & > div:first-child {
       border-bottom: none;
-      border: 1px #1e1e1e45 solid;
+      border: 1px var(--color-border) solid;
       box-shadow: 0 1px 5px 0 #1e1e1e4a;
     }
 
@@ -94,7 +94,7 @@
   .projectContentContainer {
     background: var(--color-background-secondary);
     border-radius: 5px;
-    border: 1px #1e1e1e45 solid;
+    border: 1px var(--color-border) solid;
     box-shadow: 0 1px 5px 0 #1e1e1e4a;
   }
 }
