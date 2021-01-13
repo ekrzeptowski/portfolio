@@ -6,10 +6,14 @@ import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 
-const NavbarLinks = ({ menuLinks }) => {
+const NavbarLinks = ({ menuLinks, scrolled }) => {
   const { t } = useTranslation();
   return (
-    <ul className={`container ${styles.linksContainer}`}>
+    <ul
+      className={`container ${styles.linksContainer} ${
+        scrolled ? styles.scrolled : ""
+      }`}
+    >
       {menuLinks.map((link, i) => (
         <li className={styles.link} key={i}>
           <Link to={link.to}>{t(link.string)}</Link>
@@ -19,7 +23,7 @@ const NavbarLinks = ({ menuLinks }) => {
   );
 };
 
-export function Navbar({ menuLinks }) {
+export function Navbar({ menuLinks, scrolled }) {
   const mobile = !useMedia({ minWidth: "37.5rem" });
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
@@ -35,7 +39,7 @@ export function Navbar({ menuLinks }) {
           />
         </div>
       )}
-      <NavbarLinks menuLinks={menuLinks} />
+      <NavbarLinks menuLinks={menuLinks} scrolled={scrolled} />
     </div>
   );
 }

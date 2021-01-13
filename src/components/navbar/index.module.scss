@@ -89,6 +89,7 @@
   }
   .link > a {
     position: relative;
+    color: #fafafe;
     &:hover {
       color: var(--color-primary);
     }
@@ -104,5 +105,8 @@
       right: 0;
       margin: auto;
     }
+  }
+  .scrolled a {
+    color: rgba(var(--color-text-rgb), 0.8);
   }
 }
