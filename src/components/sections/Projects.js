@@ -9,7 +9,7 @@ import styles from "./Projects.module.scss";
 import Masonry from "react-masonry-css";
 
 import { RepoCard } from "react-repo-widget";
-import "react-repo-widget/dist-esm/styles.css";
+require ("react-repo-widget/dist-esm/styles.css");
 
 const breakpointColumns = {
   default: 3,
