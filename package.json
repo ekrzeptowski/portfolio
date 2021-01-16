@@ -55,6 +55,7 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.1.11",
     "babel-loader": "^8.2.2",
+    "gatsby-plugin-sitemap": "^2.10.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.18",
     "postcss-normalize": "^9.0.0",
     "prettier": "^2.2.1",

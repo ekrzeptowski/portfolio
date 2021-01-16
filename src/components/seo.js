@@ -8,9 +8,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
+import { useI18next } from "gatsby-plugin-react-i18next";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, canonical, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,11 +29,28 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
 
+  const {
+    languages,
+    language,
+    originalPath,
+    defaultLanguage,
+    siteUrl = "",
+  } = useI18next();
+
+  const createUrlWithLang = lng => {
+    const url = `${siteUrl}${
+      lng === defaultLanguage ? "" : `/${lng}`
+    }${originalPath}`;
+    return url.endsWith("/") ? url : `${url}/`;
+  };
+
+  const canonicalUrl = canonical
+    ? canonical
+    : `${siteUrl}${originalPath.replace(`/${language}`, "")}`;
+
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang: language }}
       title={title ? title : defaultTitle}
       titleTemplate={title ? `%s | ${defaultTitle}` : null}
       meta={[
@@ -69,7 +87,22 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={canonicalUrl} />
+      {languages.map(lng => (
+        <link
+          rel="alternate"
+          key={lng}
+          href={createUrlWithLang(lng)}
+          hrefLang={lng}
+        />
+      ))}
+      <link
+        rel="alternate"
+        href={createUrlWithLang(defaultLanguage)}
+        hrefLang="x-default"
+      />
+    </Helmet>
   );
 }
 
