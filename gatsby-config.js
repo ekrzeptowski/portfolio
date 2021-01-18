@@ -46,7 +46,7 @@ module.exports = {
         path: `${__dirname}/locales`,
         languages: [`en`, `pl`],
         defaultLanguage: `pl`,
-
+        siteUrl: "https://jkrzeptowski.pl",
         // you can pass any i18next options
         // pass following options to allow message content as a key
         i18nextOptions: {
