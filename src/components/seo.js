@@ -44,10 +44,6 @@ function SEO({ description, canonical, meta, title }) {
     return url.endsWith("/") ? url : `${url}/`;
   };
 
-  const canonicalUrl = canonical
-    ? canonical
-    : `${siteUrl}${originalPath.replace(`/${language}`, "")}`;
-
   return (
     <Helmet
       htmlAttributes={{ lang: language }}
@@ -88,7 +84,6 @@ function SEO({ description, canonical, meta, title }) {
         },
       ].concat(meta)}
     >
-      <link rel="canonical" href={canonicalUrl} />
       {languages.map(lng => (
         <link
           rel="alternate"
