@@ -20,17 +20,19 @@ const Project = ({ project }) => {
           <p className={styles.description}>
             {project.description?.description}
           </p>
-          <Link
-            to={`/project/${project.devtoSlug}`}
-            className={`link ${styles.link}`}
-          >
-            <Trans>Read more</Trans>
-            <IconContext.Provider
-              value={{ style: { verticalAlign: "middle" }, size: 28 }}
+          {project.devtoSlug && (
+            <Link
+              to={`/project/${project.devtoSlug}`}
+              className={`link ${styles.link}`}
             >
-              <MdKeyboardArrowRight />
-            </IconContext.Provider>
-          </Link>
+              <Trans>Read more</Trans>
+              <IconContext.Provider
+                value={{ style: { verticalAlign: "middle" }, size: 28 }}
+              >
+                <MdKeyboardArrowRight />
+              </IconContext.Provider>
+            </Link>
+          )}
           <ul className={styles.technologiesContainer}>
             {project.technology.map(technology => (
               <li key={technology.title} className={styles.technology}>
