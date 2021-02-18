@@ -61,7 +61,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         },
       });
   });
-  result.data.allContentfulProject.edges.forEach(async ({ node }) => {
+  await Promise.all(
+    result.data.allContentfulProject.edges.map(async ({ node }) => {
     const devPost = await graphql(
       `
         query getDevPost($slug: String) {
@@ -87,5 +88,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         language: "pl",
       },
     });
-  });
+    })
+  );
 };
