@@ -4,9 +4,11 @@ import Img from "gatsby-image";
 
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
+import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowRight";
+
 import { LinkButton } from "./button";
 import { IconContext } from "@react-icons/all-files/lib";
-import { Trans } from "gatsby-plugin-react-i18next";
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 
 const Project = ({ project }) => {
   return (
@@ -18,6 +20,17 @@ const Project = ({ project }) => {
           <p className={styles.description}>
             {project.description?.description}
           </p>
+          <Link
+            to={`/project/${project.devtoSlug}`}
+            className={`link ${styles.link}`}
+          >
+            <Trans>Read more</Trans>
+            <IconContext.Provider
+              value={{ style: { verticalAlign: "middle" }, size: 28 }}
+            >
+              <MdKeyboardArrowRight />
+            </IconContext.Provider>
+          </Link>
           <ul className={styles.technologiesContainer}>
             {project.technology.map(technology => (
               <li key={technology.title} className={styles.technology}>
