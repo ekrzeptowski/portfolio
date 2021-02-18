@@ -1,0 +1,48 @@
+@import "~rfs/scss";
+$rfs-base-value: 16;
+$rfs-factor: 4;
+
+@mixin text-style {
+  @include font-size(1.3rem);
+  line-height: 1.3;
+  letter-spacing: 0.05rem;
+}
+
+.post {
+  padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+}
+.coverImage {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+.content {
+  max-width: 600px;
+  margin: auto;
+  > p {
+    @include text-style;
+  }
+  > ul {
+    padding-left: 24px;
+    > li {
+      @include text-style;
+    }
+  }
+  strong {
+    font-weight: 900;
+  }
+}
+.link {
+  color: var(--color-primary);
+}
+h1.heading {
+  @include font-size(3.5rem);
+}
+h2.heading {
+  @include font-size(2.5rem);
+}
+h3.heading {
+  @include font-size(1.5rem);
+}

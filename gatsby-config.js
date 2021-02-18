@@ -47,6 +47,13 @@ module.exports = {
         languages: [`en`, `pl`],
         defaultLanguage: `pl`,
         siteUrl: "https://jkrzeptowski.pl",
+        pages: [
+          {
+            matchPath: "/:lang?/project/:slug",
+            getLanguageFromPath: true,
+            excludeLanguages: ["en"],
+          },
+        ],
         // you can pass any i18next options
         // pass following options to allow message content as a key
         i18nextOptions: {
@@ -91,6 +98,12 @@ module.exports = {
         variables: {
           user: process.env.GITHUB_USER,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-mydev`,
+      options: {
+        apiKey: process.env.DEVTO_TOKEN,
       },
     },
     {
