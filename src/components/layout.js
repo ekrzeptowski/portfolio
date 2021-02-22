@@ -29,13 +29,16 @@ const Layout = ({ children, style, offset }) => {
     }
   `);
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(offset ? false : true);
 
   useScrollPosition(
-    ({ currPos }) =>
-      -currPos?.y + 132 > offset?.current?.offsetTop
-        ? setScrolled(true)
-        : setScrolled(false),
+    ({ currPos }) => {
+      if (offset) {
+        -currPos?.y + 132 > offset?.current?.offsetTop
+          ? setScrolled(true)
+          : setScrolled(false);
+      }
+    },
     offset,
     [],
     false,
