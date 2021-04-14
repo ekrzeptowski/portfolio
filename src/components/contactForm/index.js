@@ -17,7 +17,7 @@ function getFormData(object) {
 const ContactForm = () => {
   const { t } = useTranslation();
 
-  const { register, handleSubmit, watch } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const [sent, setSent] = useState(false);
 
@@ -37,24 +37,21 @@ const ContactForm = () => {
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
       <Input
-        name="name"
-        ref={register}
+        {...register("name")}
         placeholder={`${t("Your name")} *`}
         autoComplete="name"
         aria-label={t("Your name")}
         required
       />
       <Input
-        name="email"
+        {...register("email")}
         type="email"
-        ref={register}
         placeholder={`${t("Your e-mail")} *`}
         aria-label={t("Your e-mail")}
         required
       />
       <TextArea
-        name="message"
-        ref={register}
+        {...register("message")}
         placeholder={`${t("Your message")} *`}
         aria-label={t("Your message")}
         required
