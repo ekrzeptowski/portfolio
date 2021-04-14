@@ -44,7 +44,7 @@ const Contact = ({ contact }) => {
           <div className={styles.social}>
             <a
               className={`${styles.contactLink} ${styles.text}`}
-              href={`tel:${contact.contactPhone}`}
+              href={`tel:${contact.phone}`}
             >
               <Icon icon={<FaPhone />} />
               {parsedNumber}
