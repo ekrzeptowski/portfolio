@@ -118,9 +118,7 @@ export const pageQuery = graphql`
           link
           repo
           preview {
-            fluid(maxWidth: 840) {
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(width: 840, placeholder: BLURRED)
           }
         }
       }

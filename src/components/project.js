@@ -9,11 +9,15 @@ import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowR
 import { LinkButton } from "./button";
 import { IconContext } from "@react-icons/all-files/lib";
 import { Link, Trans } from "gatsby-plugin-react-i18next";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({ project }) => {
   return (
     <div className={styles.projectContainer}>
-      <Img fluid={project.preview.fluid} />
+      <GatsbyImage
+        image={project.preview.gatsbyImageData}
+        alt={`${project.title} preview`}
+      />
       <div className={styles.projectContent}>
         <div className={styles.projectContentContainer}>
           <p className={styles.title}>{project.title}</p>
