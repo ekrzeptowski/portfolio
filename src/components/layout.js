@@ -39,7 +39,7 @@ const Layout = ({ children, style, offset }) => {
           : setScrolled(false);
       }
     },
-    offset,
+    [offset?.current],
     [],
     false,
     64
