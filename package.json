@@ -49,6 +49,7 @@
     "react-repo-widget": "^1.2.0",
     "rfs": "^9.0.3",
     "rimraf": "^3.0.2",
+    "sass": "^1.32.8",
     "unist-util-visit": "^2.0.3",
     "use-media": "^1.4.0"
   },
