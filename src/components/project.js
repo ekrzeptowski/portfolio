@@ -8,10 +8,11 @@ import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowR
 
 import { LinkButton } from "./button";
 import { IconContext } from "@react-icons/all-files/lib";
-import { Link, Trans } from "gatsby-plugin-react-i18next";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({ project }) => {
+  const {t} = useTranslation();
   return (
     <div className={styles.projectContainer}>
       <GatsbyImage
@@ -28,6 +29,7 @@ const Project = ({ project }) => {
             <Link
               to={`/project/${project.devtoSlug}`}
               className={`link ${styles.link}`}
+              title={`${t("Read more about")} ${project.title}`}
             >
               <Trans>Read more</Trans>
               <IconContext.Provider
