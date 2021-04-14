@@ -35,9 +35,7 @@ const Project = ({ project }) => {
           )}
           <ul className={styles.technologiesContainer}>
             {project.technology.map(technology => (
-              <li key={technology.title} className={styles.technology}>
-                {technology.title}
-              </li>
+              <li key={technology.title}>{technology.title}</li>
             ))}
           </ul>
           <div>
