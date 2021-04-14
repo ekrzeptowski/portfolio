@@ -1,7 +1,7 @@
 exports.githubApiQuery = `
 query($user: String!) {
     user(login: $user) {
-        repositories(first: 10, orderBy: {field: STARGAZERS, direction: DESC}) {
+        repositories(first: 10, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC) {
           nodes {
             description
             name
