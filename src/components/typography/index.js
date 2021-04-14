@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./index.module.scss";
+import * as styles from "./index.module.scss";
 
 export const SectionTitle = ({ children }) => {
   return <h1 className={styles.sectionTitle}>{children}</h1>;

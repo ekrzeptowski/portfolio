@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 
 import { Trans } from "gatsby-plugin-react-i18next";
 
-import styles from "./About.module.scss";
+import * as styles from "./About.module.scss";
 import { SectionTitle } from "../typography";
 
 const About = forwardRef((props, ref) => {

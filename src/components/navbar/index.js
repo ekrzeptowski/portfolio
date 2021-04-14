@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./index.module.scss";
+import * as styles from "./index.module.scss";
 
 import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";

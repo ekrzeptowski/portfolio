@@ -4,7 +4,7 @@ import { SectionTitle, SubTitle } from "../typography";
 
 import { Trans } from "gatsby-plugin-react-i18next";
 
-import styles from "./Projects.module.scss";
+import * as styles from "./Projects.module.scss";
 
 import Masonry from "react-masonry-css";
 

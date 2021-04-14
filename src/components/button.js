@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./input.module.scss";
+import * as styles from "./input.module.scss";
 
 export function Button({ children }) {
   return <button className={styles.button}>{children}</button>;

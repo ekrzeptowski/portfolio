@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Input, SubmitButton, TextArea } from "../input";
 import { useForm } from "react-hook-form";
 
-import styles from "./index.module.scss";
+import * as styles from "./index.module.scss";
 
 import { FaRegSmile } from "@react-icons/all-files/fa/FaRegSmile";
 import { Icon } from "../icon";

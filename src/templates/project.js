@@ -8,7 +8,7 @@ import liquidTags from "../plugins/github";
 
 import { RepoCardFetch } from "react-repo-widget";
 
-import styles from "./project.module.scss";
+import * as styles from "./project.module.scss";
 import { SectionTitle } from "../components/typography";
 require("react-repo-widget/dist-esm/styles.css");
 

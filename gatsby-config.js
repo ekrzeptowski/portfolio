@@ -41,9 +41,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
+        name: `locale`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `pl`],
         defaultLanguage: `pl`,
         siteUrl: "https://jkrzeptowski.pl",

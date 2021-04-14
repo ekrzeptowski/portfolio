@@ -4,7 +4,7 @@ import { SectionTitle } from "../typography";
 
 import { Trans } from "gatsby-plugin-react-i18next";
 
-import styles from "./Skills.module.scss";
+import * as styles from "./Skills.module.scss";
 import "tippy.js/dist/tippy.css";
 
 const Skills = ({ skills }) => {
