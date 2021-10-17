@@ -7,4 +7,4 @@ const github = ([repo]) => {
   return `${repo}`;
 };
 
-module.exports = github;
+export default github;

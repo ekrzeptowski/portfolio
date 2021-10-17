@@ -27,4 +27,4 @@ const removeTrailingSlash = url => {
   return url.replace(/\/+$/, "");
 };
 
-module.exports = { breakLiquidTag, checkURL };
+export { breakLiquidTag, checkURL };

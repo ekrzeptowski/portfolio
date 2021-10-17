@@ -1,11 +1,11 @@
-const visit = require("unist-util-visit");
-const toString = require("mdast-util-to-string");
+import { visit } from "unist-util-visit";
+import { toString } from "mdast-util-to-string";
 
-const { breakLiquidTag } = require("./utils");
+import { breakLiquidTag } from "./utils";
 
-const getGithub = require("./embeds/github");
+import getGithub from "./embeds/github";
 
-module.exports = liquidTags;
+export default liquidTags;
 function liquidTags() {
   return transformer;
 }
