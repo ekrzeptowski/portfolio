@@ -4,10 +4,10 @@ const { githubApiQuery } = require("./github-query");
 
 module.exports = {
   siteMetadata: {
-    title: `Jan Krzeptowski`,
-    description: `Jan Krzeptowski is a front-end developer.`,
+    title: `Ewelina Krzeptowska`,
+    description: `Ewelina Krzeptowska is a front-end developer.`,
     author: `@saj96n`,
-    siteUrl: "https://jkrzeptowski.pl",
+    siteUrl: "https://ekrzeptowski.pl",
     menuLinks: [
       { to: "/#", string: "Home" },
       { to: "/#about", string: "About" },
