@@ -126,28 +126,23 @@ module.exports = {
                 }
               }
               allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
-                edges {
-                  node {
-                    context {
-                      i18n {
-                        defaultLanguage
-                        languages
-                        originalPath
-                      }
+                nodes {
+                  context {
+                    i18n {
+                      defaultLanguage
+                      languages
+                      originalPath
                     }
-                    path
                   }
+                  path
                 }
               }
             }
           `,
         serialize: ({ site, allSitePage }) => {
-          return allSitePage.edges.map(edge => {
-            const {
-              languages,
-              originalPath,
-              defaultLanguage,
-            } = edge.node.context.i18n;
+          return allSitePage.nodes.map(node => {
+            const { languages, originalPath, defaultLanguage } =
+              node.context.i18n;
             const { siteUrl } = site.siteMetadata;
             const url = siteUrl + originalPath;
             const links = [
