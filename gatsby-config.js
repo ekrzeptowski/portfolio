@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const path = require("path");
+
 const { githubApiQuery } = require("./github-query");
 
 module.exports = {
@@ -28,7 +30,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: `${__dirname}/src/svg/`,
+          include: path.resolve(__dirname, `src/svg/`),
         },
       },
     },
@@ -53,7 +55,7 @@ module.exports = {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `pl`],
         defaultLanguage: `pl`,
-        siteUrl: "https://jkrzeptowski.pl",
+        siteUrl: "https://ekrzeptowski.pl",
         pages: [
           {
             matchPath: "/:lang?/project/:slug",
@@ -79,8 +81,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jan Krzeptowski`,
-        short_name: `Jan Krzeptowski`,
+        name: `Ewelina Krzeptowska`,
+        short_name: `Ewelina Krzeptowska`,
         start_url: `/`,
         background_color: `#5e25ff`,
         theme_color: `#5e25ff`,
@@ -95,7 +97,7 @@ module.exports = {
       options: {
         siteId: process.env.SITE_ID,
         matomoUrl: process.env.MATOMO_URL,
-        siteUrl: "https://jkrzeptowski.pl",
+        siteUrl: "https://ekrzeptowski.pl",
       },
     },
     {
