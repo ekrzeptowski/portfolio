@@ -63,31 +63,31 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
   await Promise.all(
     result.data.allContentfulProject.edges.map(async ({ node }) => {
-    const devPost = await graphql(
-      `
-        query getDevPost($slug: String) {
-          myDev(article: { slug: { eq: $slug } }) {
-            article {
-              cover_image
-              title
+      const devPost = await graphql(
+        `
+          query getDevPost($slug: String) {
+            myDev(article: { slug: { eq: $slug } }) {
+              article {
+                cover_image
+                title
+              }
             }
           }
-        }
-      `,
-      { slug: node.devtoSlug }
-    );
-    createPage({
-      path: `project/${node.devtoSlug}`,
-      component: blogPostTemplate,
-      context: {
-        article: {
-          body_markdown: node.longDescription.longDescription,
-          cover_image: devPost.data.myDev.article.cover_image,
-          title: devPost.data.myDev.article.title,
+        `,
+        { slug: node.devtoSlug },
+      );
+      createPage({
+        path: `project/${node.devtoSlug}`,
+        component: blogPostTemplate,
+        context: {
+          article: {
+            body_markdown: node.longDescription.longDescription,
+            cover_image: devPost.data.myDev.article.cover_image,
+            title: devPost.data.myDev.article.title,
+          },
+          language: "pl",
         },
-        language: "pl",
-      },
-    });
-    })
+      });
+    }),
   );
 };

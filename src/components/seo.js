@@ -23,7 +23,7 @@ function SEO({ description, canonical, meta, title }) {
           }
         }
       }
-    `
+    `,
   );
 
   const metaDescription = description || site.siteMetadata.description;
@@ -37,7 +37,7 @@ function SEO({ description, canonical, meta, title }) {
     siteUrl = "",
   } = useI18next();
 
-  const createUrlWithLang = lng => {
+  const createUrlWithLang = (lng) => {
     const url = `${siteUrl}${
       lng === defaultLanguage ? "" : `/${lng}`
     }${originalPath}`;
@@ -84,7 +84,7 @@ function SEO({ description, canonical, meta, title }) {
         },
       ].concat(meta)}
     >
-      {languages.map(lng => (
+      {languages.map((lng) => (
         <link
           rel="alternate"
           key={lng}

@@ -5,7 +5,7 @@ export default {
   title: "Typography",
   // component: SectionTitle
 };
-export const SectionTitle = args => <Section_Title {...args} />;
+export const SectionTitle = (args) => <Section_Title {...args} />;
 SectionTitle.args = { children: "Section title" };
 {
   /* Section.arg */

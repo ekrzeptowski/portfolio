@@ -10,7 +10,7 @@ import { Icon } from "../icon";
 
 function getFormData(object) {
   const formData = new FormData();
-  Object.keys(object).forEach(key => formData.append(key, object[key]));
+  Object.keys(object).forEach((key) => formData.append(key, object[key]));
   return formData;
 }
 
@@ -21,14 +21,14 @@ const ContactForm = () => {
 
   const [sent, setSent] = useState(false);
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     fetch(
       "https://script.google.com/macros/s/AKfycbxmKCbInQ3lS5baKkXoSc3llq9JDiW4aGnN8MwPh5KbmBMPSYMy/exec",
       {
         method: "POST",
         body: getFormData(data),
-      }
-    ).then(response => {
+      },
+    ).then((response) => {
       if (response.status >= 200 && response.status < 300) {
         setSent(true);
       }

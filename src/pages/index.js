@@ -33,7 +33,7 @@ const IndexPage = ({
     switch (section.type) {
       case "hero":
         components.push(
-          <Header key={index} bio={section.content.childMarkdownRemark.html} />
+          <Header key={index} bio={section.content.childMarkdownRemark.html} />,
         );
         break;
       case "basicText":
@@ -42,12 +42,12 @@ const IndexPage = ({
             ref={aboutRef}
             key={index}
             about={section.content.childMarkdownRemark.html}
-          />
+          />,
         );
         break;
       case "skills":
         components.push(
-          <Skills key={index} skills={allContentfulTechnologyCategory.edges} />
+          <Skills key={index} skills={allContentfulTechnologyCategory.edges} />,
         );
         break;
       case "projects":
@@ -56,7 +56,7 @@ const IndexPage = ({
             key={index}
             projects={allContentfulProject.edges}
             githubUser={githubUser}
-          />
+          />,
         );
         break;
       case "contact":
@@ -70,7 +70,7 @@ const IndexPage = ({
   return (
     <Layout offset={aboutRef}>
       <SEO description={contentfulPage.description} lang={language} />
-      {components.map(component => component)}
+      {components.map((component) => component)}
     </Layout>
   );
 };
@@ -79,7 +79,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery($language: String) {
-    locales: allLocale(filter: {language: {eq: $language}}) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
@@ -88,7 +88,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    
+
     contentfulPage(name: { eq: "Index" }, node_locale: { eq: $language }) {
       title
       name

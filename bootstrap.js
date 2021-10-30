@@ -13,8 +13,8 @@ console.log(`
   You can find all the needed information in your Contentful space under:
   ${chalk.yellow(
     `app.contentful.com ${chalk.red("->")} Space Settings ${chalk.red(
-      "->"
-    )} API keys`
+      "->",
+    )} API keys`,
   )}
   The ${chalk.green("Content Management API Token")}
     will be used to import and write data to your space.
@@ -30,7 +30,7 @@ const questions = [
     name: "spaceId",
     message: "Your Space ID",
     when: !argv.spaceId && !process.env.SPACE_ID,
-    validate: input =>
+    validate: (input) =>
       /^[a-z0-9]{12}$/.test(input) ||
       "Space ID must be 12 lowercase characters",
   },
@@ -53,12 +53,12 @@ const questions = [
   },
   {
     name: "matomoURL",
-    when: answers => answers.matomo,
+    when: (answers) => answers.matomo,
     message: "Your matomo instance URL",
   },
   {
     name: "siteId",
-    when: answers => answers.matomo,
+    when: (answers) => answers.matomo,
     message: "Matomo site ID",
   },
 ];
@@ -66,12 +66,8 @@ const questions = [
 inquirer
   .prompt(questions)
   .then(({ spaceId, managementToken, accessToken, matomoURL, siteId }) => {
-    const {
-      SPACE_ID,
-      CONTENTFUL_ACCESS_TOKEN,
-      MATOMO_URL,
-      SITE_ID,
-    } = process.env;
+    const { SPACE_ID, CONTENTFUL_ACCESS_TOKEN, MATOMO_URL, SITE_ID } =
+      process.env;
 
     // env vars are given precedence followed by args provided to the setup
     // followed by input given to prompts displayed by the setup script
@@ -82,7 +78,7 @@ inquirer
     siteId = SITE_ID || argv.siteId || siteId;
 
     console.log("Writing config file...");
-    const configFiles = [`.env`].map(file => path.join(__dirname, file));
+    const configFiles = [`.env`].map((file) => path.join(__dirname, file));
 
     const fileContents =
       [
@@ -95,20 +91,20 @@ inquirer
         siteId ? `SITE_ID='${siteId}'` : "",
       ].join("\n") + "\n";
 
-    configFiles.forEach(file => {
+    configFiles.forEach((file) => {
       writeFileSync(file, fileContents, "utf8");
       console.log(`Config file ${chalk.yellow(file)} written`);
     });
     return { spaceId, managementToken };
   })
   .then(({ spaceId, managementToken }) =>
-    spaceImport({ spaceId, managementToken, content: exportFile })
+    spaceImport({ spaceId, managementToken, content: exportFile }),
   )
   .then((_, error) => {
     console.log(
       `All set! You can now run ${chalk.yellow(
-        "npm run develop"
-      )} to see it in action.`
+        "npm run develop",
+      )} to see it in action.`,
     );
   })
-  .catch(error => console.error(error));
+  .catch((error) => console.error(error));

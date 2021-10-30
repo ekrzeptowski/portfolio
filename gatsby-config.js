@@ -46,8 +46,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`
-      }
+        name: `locale`,
+      },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
@@ -142,7 +142,7 @@ module.exports = {
             }
           `,
         serialize: ({ site, allSitePage }) => {
-          return allSitePage.nodes.map(node => {
+          return allSitePage.nodes.map((node) => {
             const { languages, originalPath, defaultLanguage } =
               node.context.i18n;
             const { siteUrl } = site.siteMetadata;
@@ -151,7 +151,7 @@ module.exports = {
               { lang: defaultLanguage, url },
               { lang: "x-default", url },
             ];
-            languages.forEach(lang => {
+            languages.forEach((lang) => {
               if (lang === defaultLanguage) return;
               links.push({ lang, url: `${siteUrl}/${lang}${originalPath}` });
             });

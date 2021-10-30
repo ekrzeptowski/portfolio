@@ -9,7 +9,7 @@ import * as styles from "./Projects.module.scss";
 import Masonry from "react-masonry-css";
 
 import { RepoCard } from "react-repo-widget";
-require ("react-repo-widget/dist-esm/styles.css");
+require("react-repo-widget/dist-esm/styles.css");
 
 const breakpointColumns = {
   default: 3,
@@ -26,7 +26,7 @@ const Projects = ({ projects, githubUser }) => {
       </SectionTitle>
       {/* <SubTitle>TODO: Filter bar</SubTitle> */}
       <div className={styles.projectsContainer}>
-        {projects.map(project => {
+        {projects.map((project) => {
           project = project.node;
           return <Project key={project.title} project={project} />;
         })}
@@ -39,7 +39,7 @@ const Projects = ({ projects, githubUser }) => {
         className={styles.gridContainer}
         columnClassName={styles.gridColumn}
       >
-        {githubUser.repositories.nodes.map(repo => (
+        {githubUser.repositories.nodes.map((repo) => (
           <RepoCard center key={repo.name} repo={repo} />
         ))}
       </Masonry>

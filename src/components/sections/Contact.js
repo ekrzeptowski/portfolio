@@ -58,7 +58,7 @@ const Contact = ({ contact }) => {
             </a>
           </div>
           <div>
-            {contact.socialNetworks.map(link => (
+            {contact.socialNetworks.map((link) => (
               <a
                 key={link.url}
                 className={styles.contactLink}

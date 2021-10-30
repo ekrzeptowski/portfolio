@@ -3,7 +3,7 @@
  * @param {String=} tag
  * @returns {Object} service and options in an object
  */
-const breakLiquidTag = tag => {
+const breakLiquidTag = (tag) => {
   // replace multiple spaces with just one space
   tag = tag.replace(/\s{2,}/g, " ");
 
@@ -19,11 +19,11 @@ const breakLiquidTag = tag => {
   };
 };
 
-const checkURL = url => {
+const checkURL = (url) => {
   return url.startsWith("https://") ? removeTrailingSlash(url) : null;
 };
 
-const removeTrailingSlash = url => {
+const removeTrailingSlash = (url) => {
   return url.replace(/\/+$/, "");
 };
 

@@ -42,7 +42,7 @@ const Layout = ({ children, style, offset }) => {
     [offset?.current],
     [],
     false,
-    64
+    64,
   );
 
   return (

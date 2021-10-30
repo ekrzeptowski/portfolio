@@ -12,7 +12,7 @@ import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({ project }) => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className={styles.projectContainer}>
       <GatsbyImage
@@ -40,7 +40,7 @@ const Project = ({ project }) => {
             </Link>
           )}
           <ul className={styles.technologiesContainer}>
-            {project.technology.map(technology => (
+            {project.technology.map((technology) => (
               <li key={technology.title}>{technology.title}</li>
             ))}
           </ul>

@@ -11,7 +11,7 @@ function liquidTags() {
 }
 
 function transformer(tree) {
-  visit(tree, "paragraph", node => {
+  visit(tree, "paragraph", (node) => {
     // Grab the innerText of the paragraph node
     let text = toString(node);
 

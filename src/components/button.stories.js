@@ -5,5 +5,5 @@ export default {
   title: "Button",
   // component: SectionTitle
 };
-export const Button = args => <ButtonStory {...args} />;
+export const Button = (args) => <ButtonStory {...args} />;
 Button.args = { children: "Button" };
