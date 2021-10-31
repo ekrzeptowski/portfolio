@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Ewelina Krzeptowska`,
     description: `Ewelina Krzeptowska is a front-end developer.`,
-    author: `@saj96n`,
+    author: `@ekrzeptowski`,
     siteUrl: "https://ekrzeptowski.pl",
     menuLinks: [
       { to: "/#", string: "Home" },
