@@ -1,66 +1,49 @@
 import React, { createRef } from "react";
-import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+// import SEO from "../components/seo";
 
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Header from "../components/sections/Header";
 import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
+import {
+  getContact,
+  getPageSections,
+  getProjects,
+  getTechnologyCategory,
+} from "../lib/contentful";
+import { getGitHubRepos } from "../lib/github";
 
-import { I18nextContext } from "gatsby-plugin-react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { parsePhoneNumber } from "libphonenumber-js";
 
-const IndexPage = ({
-  data: {
-    contentfulPage,
-    allContentfulProject,
-    allContentfulTechnologyCategory,
-    contentfulContact,
-    allGithubData,
-  },
-}) => {
+const IndexPage = ({ sections, projects, repos, categories, contact }) => {
   const aboutRef = createRef();
-  const { language } = React.useContext(I18nextContext);
-
-  const githubUser = allGithubData.nodes[0].data.user;
 
   // Dynamic sections creation
   let components = [];
-  const sections = contentfulPage.sections;
   sections.forEach((section, index) => {
     switch (section.type) {
       case "hero":
-        components.push(
-          <Header key={index} bio={section.content.childMarkdownRemark.html} />,
-        );
+        components.push(<Header key={index} bio={section.content} />);
         break;
       case "basicText":
         components.push(
-          <About
-            ref={aboutRef}
-            key={index}
-            about={section.content.childMarkdownRemark.html}
-          />,
+          <About ref={aboutRef} key={index} about={section.content} />,
         );
         break;
       case "skills":
-        components.push(
-          <Skills key={index} skills={allContentfulTechnologyCategory.edges} />,
-        );
+        components.push(<Skills key={index} skills={categories} />);
         break;
       case "projects":
         components.push(
-          <Projects
-            key={index}
-            projects={allContentfulProject.edges}
-            githubUser={githubUser}
-          />,
+          <Projects key={index} projects={projects} githubUser={repos} />,
         );
         break;
       case "contact":
-        components.push(<Contact key={index} contact={contentfulContact} />);
+        components.push(<Contact key={index} contact={contact} />);
         break;
       default:
         break;
@@ -69,7 +52,7 @@ const IndexPage = ({
 
   return (
     <Layout offset={aboutRef}>
-      <SEO description={contentfulPage.description} lang={language} />
+      {/* <SEO description={contentfulPage.description} lang={language} /> */}
       {components.map((component) => component)}
     </Layout>
   );
@@ -77,115 +60,25 @@ const IndexPage = ({
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query IndexQuery($language: String) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+export async function getStaticProps({ preview = false, locale }) {
+  const sections = (await getPageSections("Index", locale)) ?? [];
+  const projects = (await getProjects(locale)) ?? [];
+  const repos = (await getGitHubRepos()) ?? [];
+  const categories = (await getTechnologyCategory(locale)) ?? [];
+  const contact = (await getContact()) ?? [];
 
-    contentfulPage(name: { eq: "Index" }, node_locale: { eq: $language }) {
-      title
-      name
-      description
-      sections {
-        title
-        type
-        content {
-          childMarkdownRemark {
-            html
-          }
-        }
-      }
-    }
+  // Parse phone number on server side
+  const phoneNumber = parsePhoneNumber(contact?.phone);
+  contact.phone = phoneNumber.formatInternational();
 
-    allContentfulProject(filter: { node_locale: { eq: $language } }) {
-      edges {
-        node {
-          title
-          technology {
-            title
-          }
-          description {
-            description
-          }
-          devtoSlug
-          link
-          repo
-          preview {
-            gatsbyImageData(width: 840, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-
-    allContentfulTechnologyCategory(
-      sort: { fields: order, order: ASC }
-      filter: { node_locale: { eq: $language } }
-    ) {
-      edges {
-        node {
-          type
-          technology {
-            title
-            description {
-              description
-            }
-            logo {
-              localFile {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-    }
-
-    allGithubData {
-      nodes {
-        data {
-          user {
-            repositories {
-              nodes {
-                description
-                name
-                stargazerCount
-                watchers {
-                  totalCount
-                }
-                pushedAt
-                primaryLanguage {
-                  name
-                }
-                owner {
-                  avatarUrl
-                  login
-                }
-                licenseInfo {
-                  spdxId
-                }
-                forks {
-                  totalCount
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    contentfulContact {
-      email
-      phone
-      socialNetworks {
-        title
-        url
-      }
-    }
-  }
-`;
+  return {
+    props: {
+      sections,
+      projects,
+      repos,
+      categories,
+      contact,
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

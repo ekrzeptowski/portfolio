@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../project";
 import { SectionTitle, SubTitle } from "../typography";
 
-import { Trans } from "gatsby-plugin-react-i18next";
+import { Trans } from "next-i18next";
 
 import * as styles from "./Projects.module.scss";
 
@@ -27,7 +27,6 @@ const Projects = ({ projects, githubUser }) => {
       {/* <SubTitle>TODO: Filter bar</SubTitle> */}
       <div className={styles.projectsContainer}>
         {projects.map((project) => {
-          project = project.node;
           return <Project key={project.title} project={project} />;
         })}
       </div>
@@ -39,7 +38,7 @@ const Projects = ({ projects, githubUser }) => {
         className={styles.gridContainer}
         columnClassName={styles.gridColumn}
       >
-        {githubUser.repositories.nodes.map((repo) => (
+        {githubUser.map((repo) => (
           <RepoCard center key={repo.name} repo={repo} />
         ))}
       </Masonry>

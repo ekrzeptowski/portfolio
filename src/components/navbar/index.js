@@ -4,7 +4,8 @@ import * as styles from "./index.module.scss";
 
 import { Divide as Hamburger } from "hamburger-react";
 import useMedia from "use-media";
-import { Link, useTranslation } from "gatsby-plugin-react-i18next";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const NavbarLinks = ({ menuLinks, scrolled }) => {
   const { t } = useTranslation();
@@ -14,9 +15,9 @@ const NavbarLinks = ({ menuLinks, scrolled }) => {
         scrolled ? styles.scrolled : ""
       }`}
     >
-      {menuLinks.map((link, i) => (
+      {menuLinks?.map((link, i) => (
         <li className={styles.link} key={i}>
-          <Link to={link.to}>{t(link.string)}</Link>
+          <Link href={link.to}>{t(link.string)}</Link>
         </li>
       ))}
     </ul>

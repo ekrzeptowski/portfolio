@@ -1,33 +1,25 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+// import { useStaticQuery, graphql } from "gatsby";
+import config from "../config";
 
-import "normalize.css";
-import "./layout.scss";
 import { Navbar } from "./navbar";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Layout = ({ children, style, offset }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            to
-            string
-          }
-        }
-      }
-    }
-  `);
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //         menuLinks {
+  //           to
+  //           string
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
   const [scrolled, setScrolled] = useState(offset ? false : true);
 
@@ -48,8 +40,8 @@ const Layout = ({ children, style, offset }) => {
   return (
     <>
       <Navbar
-        siteTitle={data.site.siteMetadata?.title || `Title`}
-        menuLinks={data.site.siteMetadata?.menuLinks}
+        siteTitle={config?.title || `Title`}
+        menuLinks={config?.menuLinks}
         scrolled={scrolled}
       />
       <div style={style}>
@@ -62,7 +54,8 @@ const Layout = ({ children, style, offset }) => {
           }}
           className="container"
         >
-          {data.site.siteMetadata?.title} {new Date().getFullYear()}, Built with
+          {/* {data.site.siteMetadata?.title} */}
+          {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>

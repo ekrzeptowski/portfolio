@@ -1,11 +1,11 @@
 import React, { forwardRef } from "react";
 
-import { Trans } from "gatsby-plugin-react-i18next";
+import { Trans } from "next-i18next";
 
 import * as styles from "./About.module.scss";
 import { SectionTitle } from "../typography";
 
-const About = forwardRef((props, ref) => {
+const About = forwardRef(function About(props, ref) {
   return (
     <section id="about" ref={ref}>
       <SectionTitle>

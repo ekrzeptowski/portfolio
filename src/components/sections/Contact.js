@@ -11,8 +11,7 @@ import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 
-import { parsePhoneNumber } from "libphonenumber-js";
-import { Trans } from "gatsby-plugin-react-i18next";
+import { Trans } from "next-i18next";
 
 const RenderIcon = ({ icon }) => {
   switch (icon) {
@@ -32,8 +31,6 @@ const RenderIcon = ({ icon }) => {
 };
 
 const Contact = ({ contact }) => {
-  const phoneNumber = parsePhoneNumber(contact.phone);
-  const parsedNumber = phoneNumber.formatInternational();
   return (
     <section id="contact">
       <SectionTitle>
@@ -47,7 +44,7 @@ const Contact = ({ contact }) => {
               href={`tel:${contact.phone}`}
             >
               <Icon icon={<FaPhone />} />
-              {parsedNumber}
+              {contact.phone}
             </a>
             <a
               className={`${styles.contactLink} ${styles.text}`}
@@ -58,7 +55,7 @@ const Contact = ({ contact }) => {
             </a>
           </div>
           <div>
-            {contact.socialNetworks.map((link) => (
+            {contact.socialNetworksCollection.items.map((link) => (
               <a
                 key={link.url}
                 className={styles.contactLink}

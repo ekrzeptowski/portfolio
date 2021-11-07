@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "next-i18next";
 import { Input, SubmitButton, TextArea } from "../input";
 import { useForm } from "react-hook-form";
 

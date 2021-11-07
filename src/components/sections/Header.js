@@ -13,8 +13,10 @@ const Header = ({ bio }) => {
       >
         <div
           className={styles.greeting}
-          dangerouslySetInnerHTML={{ __html: bio }}
-        ></div>
+          // dangerouslySetInnerHTML={{ __html: bio }}
+        >
+          {bio}
+        </div>
         <Hero />
       </div>
 

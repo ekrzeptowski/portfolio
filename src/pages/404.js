@@ -1,13 +1,15 @@
 import React from "react";
-import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+// import SEO from "../components/seo";
+
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import NotFound from "../svg/not-found.svg";
+
 const NotFoundPage = () => (
   <Layout style={{ paddingTop: 66 }}>
-    <SEO title="404: Not found" />
+    {/* <SEO title="404: Not found" /> */}
     <div style={{ display: "flex", justifyContent: "center" }}>
       <NotFound style={{ maxWidth: 600, flexGrow: 1 }} />
     </div>
@@ -16,16 +18,10 @@ const NotFoundPage = () => (
 
 export default NotFoundPage;
 
-export const query = graphql`
-  query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
