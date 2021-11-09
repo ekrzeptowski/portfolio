@@ -3,6 +3,7 @@ import React from "react";
 import * as styles from "./Header.module.scss";
 
 import Hero from "../../svg/hero.svg";
+import ReactMarkdown from "react-markdown";
 
 const Header = ({ bio }) => {
   return (
@@ -11,11 +12,8 @@ const Header = ({ bio }) => {
         className={`container ${styles.headerWrapper}`}
         style={{ width: "100%" }}
       >
-        <div
-          className={styles.greeting}
-          // dangerouslySetInnerHTML={{ __html: bio }}
-        >
-          {bio}
+        <div className={styles.greeting}>
+          <ReactMarkdown>{bio}</ReactMarkdown>
         </div>
         <Hero />
       </div>
