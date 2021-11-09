@@ -34,17 +34,16 @@ const Project = ({ project }) => {
           {project.devtoSlug && (
             <Link
               href={`/project/${project.devtoSlug}`}
-              className={`link ${styles.link}`}
               title={`${t("Read more about")} ${project.title}`}
             >
-              <>
+              <a className={`link ${styles.link}`}>
                 <Trans>Read more</Trans>
                 <IconContext.Provider
                   value={{ style: { verticalAlign: "middle" }, size: 28 }}
                 >
                   <MdKeyboardArrowRight />
                 </IconContext.Provider>
-              </>
+              </a>
             </Link>
           )}
           <ul className={styles.technologiesContainer}>

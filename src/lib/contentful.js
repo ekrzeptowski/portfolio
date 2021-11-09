@@ -67,6 +67,43 @@ export async function getProjects(locale) {
   return projects?.data?.projectCollection?.items;
 }
 
+export async function getProjectSlugs(locale) {
+  const projects = await fetchGraphQL(
+    `query {
+        projectCollection(locale: "${locale}") {
+            items {
+              devtoSlug
+            }
+          }
+      }`,
+  );
+
+  const slugs = [];
+  projects?.data?.projectCollection?.items.forEach((project) => {
+    project.devtoSlug && slugs.push(project.devtoSlug);
+  });
+
+  return slugs;
+}
+
+export async function getProjectDescription(slug, locale) {
+  const description = await fetchGraphQL(
+    `query {
+      projectCollection(
+        where: { devtoSlug: "${slug}" }
+        locale: "${locale}"
+        limit: 1
+      ) {
+        items {
+          longDescription
+        }
+      }
+    }`,
+  );
+
+  return description?.data?.projectCollection?.items[0]?.longDescription;
+}
+
 export async function getTechnologyCategory(locale) {
   const categories = await fetchGraphQL(
     `query {
