@@ -1,29 +1,31 @@
 import React from "react";
-import * as styles from "./project.module.scss";
-// import Img from "gatsby-image";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation, Trans } from "next-i18next";
 
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowRight";
+import { IconContext } from "@react-icons/all-files/lib";
 
 import { LinkButton } from "./button";
-import { IconContext } from "@react-icons/all-files/lib";
-import { useTranslation, Trans } from "next-i18next";
-// import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
-// import { GatsbyImage } from "gatsby-plugin-image";
+import * as styles from "./project.module.scss";
 
 const Project = ({ project }) => {
   const { t } = useTranslation();
   return (
     <div className={styles.projectContainer}>
-      <div style={{ position: "relative" }}>
+      <div
+        style={{
+          position: "relative",
+          aspectRatio: `${project.preview.width} / ${project.preview.height}`,
+        }}
+      >
         <Image
           src={project.preview.url}
           alt={`${project.title} preview`}
           layout="fill"
-          objectFit="scale-down"
+          objectFit="cover"
         />
       </div>
 

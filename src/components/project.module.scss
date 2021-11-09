@@ -75,6 +75,7 @@
     border: none;
     box-shadow: none;
     background: unset;
+    align-items: center;
     & > div:first-child {
       border-bottom: none;
       border: 1px var(--color-border) solid;
@@ -117,7 +118,7 @@
     & .projectContentContainer {
       margin-left: -30px;
       z-index: 1;
-      background: rgba(var(--color-background-secondary-rgb),50%);
+      background: rgba(var(--color-background-secondary-rgb), 50%);
       backdrop-filter: blur(10px);
     }
     &:nth-child(even) .projectContentContainer {

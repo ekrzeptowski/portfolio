@@ -58,6 +58,8 @@ export async function getProjects(locale) {
               repo
               preview {
                 url
+                width
+                height
               }
             }
           }
