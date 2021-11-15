@@ -2,6 +2,8 @@
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 
+import { init } from "@socialgouv/matomo-next";
+
 import "@fontsource/lato/300.css";
 import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
@@ -11,12 +13,19 @@ import config from "../config";
 
 import "normalize.css";
 import "../components/layout.scss";
+import { useEffect } from "react";
+
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
 
 function MyApp({
   Component,
   pageProps,
   router: { asPath, defaultLocale, locale, locales, route },
 }) {
+  useEffect(() => {
+    init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
+  }), [];
   return (
     <>
       <DefaultSeo

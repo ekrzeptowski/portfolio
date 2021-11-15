@@ -10,6 +10,7 @@
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-icons/all-files": "^4.1.0",
     "@sergeymyssak/nextjs-sitemap": "^2.0.3",
+    "@socialgouv/matomo-next": "^1.2.2",
     "@storybook/preset-scss": "^1.0.3",
     "@svgr/webpack": "^5.5.0",
     "@tippyjs/react": "^4.2.5",
