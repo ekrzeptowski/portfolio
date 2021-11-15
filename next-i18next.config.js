@@ -1,6 +1,8 @@
+const config = require("./src/config.js");
+
 module.exports = {
   i18n: {
     defaultLocale: "pl",
-    locales: ["en", "pl"],
+    locales: config.locales,
   },
 };
