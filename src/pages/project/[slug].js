@@ -1,3 +1,5 @@
+import { NextSeo } from "next-seo";
+
 import ReactMarkdown from "react-markdown";
 import { RepoCardFetch } from "react-repo-widget";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -27,10 +29,16 @@ const renderers = {
   },
 };
 
-function Project({ article: { body_markdown, cover_image, title } }) {
-  //   return <div>{body_markdown}</div>;
+function Project({
+  article: { body_markdown, cover_image, description, title },
+}) {
   return (
     <Layout>
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{ images: [{ url: cover_image, alt: `${title} preview` }] }}
+      />
       <main className="container">
         <section className={styles.post}>
           <SectionTitle>{title}</SectionTitle>
@@ -72,10 +80,10 @@ export async function getStaticProps({ params, locale }) {
   );
   const res = await devToPost.json();
 
+  const project = await getProjectDescription(params.slug, locale);
+
   const body_markdown =
-    locale === "en"
-      ? res.body_markdown
-      : (await getProjectDescription(params.slug, locale)) ?? {};
+    locale === "en" ? res.body_markdown : project.longDescription ?? {};
 
   // Pass post project to the page via props
   return {
@@ -83,6 +91,7 @@ export async function getStaticProps({ params, locale }) {
       article: {
         body_markdown,
         cover_image: res.cover_image,
+        description: project.description,
         title: res.title,
       },
       ...(await serverSideTranslations(locale, ["common"])),

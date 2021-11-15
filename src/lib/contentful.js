@@ -16,10 +16,10 @@ async function fetchGraphQL(query, preview = false) {
   ).then((response) => response.json());
 }
 
-export async function getPageSections(page, locale) {
-  const sections = await fetchGraphQL(
+export async function getPage(pageName, locale) {
+  const page = await fetchGraphQL(
     `query {
-        pageCollection(where: {name: "${page}"}, locale: "${locale}") {
+        pageCollection(where: {name: "${pageName}"}, locale: "${locale}", limit: 1) {
             items {
                 title
                 name
@@ -36,7 +36,7 @@ export async function getPageSections(page, locale) {
     }`,
   );
 
-  return sections?.data?.pageCollection?.items[0]?.sectionsCollection?.items;
+  return page?.data?.pageCollection?.items[0];
 }
 
 export async function getProjects(locale) {
@@ -97,13 +97,14 @@ export async function getProjectDescription(slug, locale) {
         limit: 1
       ) {
         items {
+          description
           longDescription
         }
       }
     }`,
   );
 
-  return description?.data?.projectCollection?.items[0]?.longDescription;
+  return description?.data?.projectCollection?.items[0];
 }
 
 export async function getTechnologyCategory(locale) {

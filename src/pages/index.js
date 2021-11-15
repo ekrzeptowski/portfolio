@@ -1,7 +1,7 @@
 import React, { createRef } from "react";
+import { NextSeo } from "next-seo";
 
 import Layout from "../components/layout";
-// import SEO from "../components/seo";
 
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
@@ -10,7 +10,7 @@ import Projects from "../components/sections/Projects";
 import Skills from "../components/sections/Skills";
 import {
   getContact,
-  getPageSections,
+  getPage,
   getProjects,
   getTechnologyCategory,
 } from "../lib/contentful";
@@ -18,13 +18,14 @@ import { getGitHubRepos } from "../lib/github";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { parsePhoneNumber } from "libphonenumber-js";
+import config from "../config";
 
-const IndexPage = ({ sections, projects, repos, categories, contact }) => {
+const IndexPage = ({ page, projects, repos, categories, contact }) => {
   const aboutRef = createRef();
 
   // Dynamic sections creation
   let components = [];
-  sections.forEach((section, index) => {
+  page.sectionsCollection.items.forEach((section, index) => {
     switch (section.type) {
       case "hero":
         components.push(<Header key={index} bio={section.content} />);
@@ -52,7 +53,10 @@ const IndexPage = ({ sections, projects, repos, categories, contact }) => {
 
   return (
     <Layout offset={aboutRef}>
-      {/* <SEO description={contentfulPage.description} lang={language} /> */}
+      <NextSeo
+        description={page.description}
+        openGraph={{ title: config.title }}
+      />
       {components.map((component) => component)}
     </Layout>
   );
@@ -60,8 +64,8 @@ const IndexPage = ({ sections, projects, repos, categories, contact }) => {
 
 export default IndexPage;
 
-export async function getStaticProps({ preview = false, locale }) {
-  const sections = (await getPageSections("Index", locale)) ?? [];
+export async function getStaticProps({ preview = false, locale, locales }) {
+  const page = (await getPage("Index", locale)) ?? [];
   const projects = (await getProjects(locale)) ?? [];
   const repos = (await getGitHubRepos()) ?? [];
   const categories = (await getTechnologyCategory(locale)) ?? [];
@@ -73,11 +77,13 @@ export async function getStaticProps({ preview = false, locale }) {
 
   return {
     props: {
-      sections,
+      page,
       projects,
       repos,
       categories,
       contact,
+      locale,
+      locales,
       ...(await serverSideTranslations(locale, ["common"])),
     },
   };
