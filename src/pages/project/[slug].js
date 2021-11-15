@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { NextSeo } from "next-seo";
 
 import ReactMarkdown from "react-markdown";
@@ -27,6 +28,9 @@ const renderers = {
     const Heading = `h${level}`;
     return <Heading className={styles.heading}>{children}</Heading>;
   },
+  image: ({ src, alt }) => {
+    return <img src={src} alt={alt} className={styles.coverImage} />;
+  }
 };
 
 function Project({
