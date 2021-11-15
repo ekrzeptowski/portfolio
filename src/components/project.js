@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation, Trans } from "next-i18next";
 
+import { imgLoader } from "../lib/contentful";
+
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { MdKeyboardArrowRight } from "@react-icons/all-files/md/MdKeyboardArrowRight";
@@ -23,6 +25,8 @@ const Project = ({ project }) => {
       >
         <Image
           src={project.preview.url}
+          loader={imgLoader}
+          sizes="(max-width: 599px) 100vw, (min-width: 600px) 60vw, (min-width: 940px) 70vw"
           alt={`${project.title} preview`}
           layout="fill"
           objectFit="cover"

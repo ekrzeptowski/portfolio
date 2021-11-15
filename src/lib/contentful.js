@@ -160,3 +160,7 @@ export async function getContact() {
 
   return contact?.data?.contactCollection?.items[0];
 }
+
+export const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}${quality ? "&q=" + quality : ""}`;
+};
