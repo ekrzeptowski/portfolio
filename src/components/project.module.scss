@@ -120,6 +120,7 @@
       z-index: 1;
       background: rgba(var(--color-background-secondary-rgb), 50%);
       backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
     }
     &:nth-child(even) .projectContentContainer {
       margin-left: 0;
